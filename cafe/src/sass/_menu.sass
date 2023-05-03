@@ -1,0 +1,106 @@
+.menu
+    margin: 0
+    height: 100vh
+    width: 100vw
+    position: relative
+    padding-top: 3.4rem
+    &__logo1
+        width: 58vw
+        height: 75vh
+        position: absolute
+        top: 110px
+        left: 604px
+        @include respond(big-screen)
+            display: none
+        
+
+.text-box
+    background: $box-gradient
+    border-radius: 3.1rem
+    width: 74.6rem
+    height: 33.2rem
+    margin-left: 3.8rem
+    margin-top: 4.5rem
+    padding-top: 3.2rem
+    &__logo1
+        display: none
+    @include respond(tab-land)
+        width: 39rem
+        height: 33.2rem
+    @include respond(phone)
+        position: relative 
+        margin-left: auto
+        margin-right: auto
+        margin-top: 30vh
+        height: 301px
+        &__logo1
+            display: block
+            padding-top: 3rem
+        .line-menu
+            margin-left: auto
+            margin-right: auto
+            width: 53.5vw
+            height: .8rem
+            background: rgba(255, 255, 255, 0.34)
+            margin-top: 2vh
+
+
+.nav
+    &__list
+        position: absolute
+        list-style-type: none
+        display: flex
+        flex-flow: column wrap
+        line-height: 3.8rem
+        left: 4.8rem
+        @include respond(phone)
+            left: 5.5rem
+            top: 10rem
+            text-align: center
+    &__item
+        margin: 0.8rem
+        z-index: 2
+        @include respond(phone)
+            text-shadow: 0px 4px 4px $color-white
+            margin: 10px
+    &__link
+        &:link, &:visited
+            text-transform: uppercase
+            color: $color-black
+            text-decoration: none
+            transition: .3s all
+        &:hover, &:active
+            color: $color-white
+            opacity: 1
+
+.line
+    position: absolute
+    width: 100%
+    height: 100%
+    background: $line-gradient
+    z-index:-1
+    @include respond(phone)
+        display: none
+
+.sidebar
+    margin-left: 4.8rem
+    width: min-content
+    
+.hamburger
+    border: none
+    z-index: 100
+    background-color: $color-white
+    height: .3rem
+    width: 3.5rem
+    &::before, &::after
+        content: ""
+        background-color: $color-white
+        height: .3rem
+        width: 3.5rem
+        display: block
+    &::before
+        transform: translateY(-15px)
+    &::after
+        transform: translateY(15px)
+    @include respond(phone)
+        display: none
