@@ -1,11 +1,10 @@
-import './sass/main.sass';
+import './sass/menu/main.sass';
 import BearSVG from './img/Bear.svg';
 import BearMidl from './img/Bear-midl.svg';
-function App() {
+function Menu() {
 
   return (
     <>
-    <div id="menu"></div>
         <div className="menu">
             <div className="sidebar">
                 <button className="hamburger"></button>
@@ -22,7 +21,7 @@ function App() {
                 <div className="nav">
                     <ul className="nav__list">
                         <li className="nav__item">
-                            <a href="#" className="nav__link">ГЛАВНАЯ</a>
+                            <a href="/mainpage/" className="nav__link">ГЛАВНАЯ</a>
                         </li>
                         <li className="nav__item">
                             <a href="#" className="nav__link">АКЦИИ</a>
@@ -44,4 +43,4 @@ function App() {
   )
 }
 
-export default App
+export default Menu;
