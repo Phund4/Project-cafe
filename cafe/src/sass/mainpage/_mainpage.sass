@@ -1,0 +1,27 @@
+.main
+    width: 100vw
+    height: 100vh
+    background: $background-gradient
+    display: flex
+    position: relative
+    justify-content: center
+    z-index: -100
+    &__h1
+        display: inline
+        font-size: 10rem
+        line-height: 121px
+        letter-spacing: 0.155em
+        color: $color-black
+        text-shadow: 0px 4px 33px 
+        -webkit-text-stroke: 3px $color-white
+        margin-top: 60px
+    &__h1-blur
+        display: inline
+        z-index: -1
+        position: absolute
+        font-size: 12rem
+        line-height: 145px
+        letter-spacing: 0.155em
+        color: $color-black
+        filter: blur(17.5px)
+        
