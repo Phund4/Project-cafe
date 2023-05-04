@@ -1,6 +1,6 @@
-import './sass/menu/main.sass';
-import BearSVG from './img/Bear.svg';
-import BearMidl from './img/Bear-midl.svg';
+import '../sass/menu/main.sass';
+import BearSVG from '../img/Bear.svg';
+import BearMidl from '../img/Bear-midl.svg';
 function Menu() {
 
   return (

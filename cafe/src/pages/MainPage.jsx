@@ -1,4 +1,4 @@
-import './sass/mainpage/main.sass'
+import '../sass/mainpage/main.sass'
 
 function MainPage() {
     return (
