@@ -1,0 +1,30 @@
+$color-white: #FFFFFF
+$color-black: #000000
+$background-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.32) 0%, rgba(251, 160, 23, 0.54) 12.5%, #F1970F 28.12%, #FA7800 58.33%, #FA3C00 99.48%)
+@mixin respond($breakpoint)
+    @if $breakpoint == phone
+        @media only screen and (max-width: 420px)
+            @content
+    @if $breakpoint == tab-port 
+        @media only screen and (max-width: 830px)
+            @content
+    @if $breakpoint == tab-land 
+        @media only screen and (max-width: 1024px)
+            @content
+    @if $breakpoint == big-screen 
+        @media only screen and (max-width: 1500px)
+            @content
+    
+*, ::after, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-size: 62.5%
+    
+body
+    font-family: 'Inter', sans-serif
+    font-style: normal
+    font-weight: 700
+    font-size: 4rem
