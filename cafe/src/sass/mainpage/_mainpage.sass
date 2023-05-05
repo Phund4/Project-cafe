@@ -1,3 +1,6 @@
+@import 'mainpage-header'
+@import 'mainpage-content'
+@import 'mainpage-sidebar'
 .main
     min-width: 100%
     min-height: 100%
@@ -8,39 +11,3 @@
     align-items: center
     flex-direction: column
     z-index: -100
-
-.header-mainpage
-    display: flex
-    align-items: center
-    flex-direction: column
-    position: relative
-    margin-top: 27px
-    &__h1
-        display: inline
-        height: min-content
-        width: min-content
-        font-size: 10rem
-        line-height: 121px
-        letter-spacing: 0.155em
-        color: $color-black
-        text-shadow: 0px 4px 33px 
-        -webkit-text-stroke: 3px $color-white
-        margin-top: 60px
-    &__h1-blur
-        height: min-content
-        width: min-content
-        position: absolute
-        z-index: -1
-        font-size: 12rem
-        line-height: 145px
-        letter-spacing: 0.155em
-        color: $color-black
-        filter: blur(17px)
-    &__img
-        display: inline
-        width: 39rem
-        height: 31.7rem
-
-
-.aaaa
-    background: white

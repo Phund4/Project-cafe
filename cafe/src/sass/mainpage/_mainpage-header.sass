@@ -1,0 +1,33 @@
+.mainpage-header
+    display: flex
+    align-items: center
+    flex-direction: column
+    position: relative
+    margin-top: 27px
+    &__h1
+        display: inline
+        height: min-content
+        width: min-content
+        font-size: 10rem
+        font-weight: 800
+        line-height: 121px
+        letter-spacing: 0.1em
+        color: $color-black
+        text-shadow: 0px 4px 33px #000000
+        -webkit-text-stroke: 4px $color-white
+        margin-top: 60px
+    &__h1-blur
+        height: min-content
+        width: min-content
+        position: absolute
+        z-index: -1
+        font-size: 12rem
+        font-weight: 800
+        line-height: 145px
+        letter-spacing: 0.1em
+        color: $color-black
+        filter: blur(17px)
+    &__img
+        display: inline
+        width: 39rem
+        height: 31.7rem
