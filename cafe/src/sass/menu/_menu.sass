@@ -14,7 +14,7 @@
     padding-top: 3.4rem
     z-index: 1
     @include respond(phone)
-        background: url('../../img/Group 20.svg') no-repeat
+        background: url('../../img/Group21.svg') repeat
         background-position: 50%
     &__logo1
         width: 58vw
@@ -38,13 +38,14 @@
     &__logo1
         display: none
     @include respond(tab-land)
-        width: 100%
+        width: 72.5%
         height: 33.2rem
     @include respond(phone)
         position: relative 
+        width: 100%
         margin-left: auto
         margin-right: auto
-        margin-top: 40%
+        margin-top: calc(50vh - 270px)
         height: 301px
         &__logo1
             display: block
