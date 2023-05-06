@@ -1,5 +1,6 @@
 import Menu from "../pages/Menu.jsx";
 import MainPage from "../pages/MainPage.jsx";
+import Profile from '../pages/Profile.jsx';
 import PizzaPage from "../pages/PizzaPage.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -11,6 +12,10 @@ const router = createBrowserRouter([
   {
     path: "mainpage/",
     element: <MainPage />,
+  },
+  {
+    path: 'profile/',
+    element: <Profile/>,
   },
   {
     path: "pizzapage/",
