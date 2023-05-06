@@ -20,3 +20,27 @@
         padding: 3px
         border-radius: 90px
         text-align: center
+        @include respond(tab-land)
+            font-size: 20px
+            padding: 2px 
+    &__img
+        @include respond(big-screen)
+            height: 235px 
+        @include respond(tab-land)
+            height: 180px 
+    @include respond(phone)
+        grid-template-columns: repeat(1, 1fr)
+        grid-tomplate-rows: repeat(1, 1fr)
+        grid-gap: 20px
+        padding: 10px
+        &__item-7
+            grid-column: 1 / -1
+            grid-row: 7 / 7
+    @include respond(tab-port)
+        grid-template-columns: repeat(1, 1fr)
+        grid-tomplate-rows: repeat(1, 1fr)
+        grid-gap: 20px
+        padding: 10px
+        &__item-7
+            grid-column: 1 / -1
+            grid-row: 7 / 7
