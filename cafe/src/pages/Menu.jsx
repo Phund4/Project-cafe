@@ -7,7 +7,7 @@ function Menu() {
       <div className="container-menupage">
         <div className="menu">
           <div className="sidebar">
-            {/* <button className="hamburger"></button> */}
+            <button className="hamburger"></button>
           </div>
           <div className="menu__logo1">
             <img src={BearSVG} />
