@@ -8,13 +8,14 @@ import Beer from "../img/beer.svg";
 import BeerHover from "../img/beer-hover.svg";
 import StocksLeftImg from "../img/mainpage-stocks-left.png";
 import StocksRightImg from "../img/mainpage-stocks-right.png";
+
 function MainPage() {
   return (
     <>
       <div className="main">
-        <sidebar className="mainpage-sidebar">
+        <div className="mainpage-sidebar">
           <a href="/" className="mainpage-sidebar__hamburger" />
-        </sidebar>
+        </div>
         <header className="mainpage-header">
           <h1 className="mainpage-header__h1">Подкрепление</h1>
           <h1 className="mainpage-header__h1-blur">Подкрепление</h1>
@@ -26,28 +27,34 @@ function MainPage() {
           </h2>
           <div className="mainpage-content__icons">
             <div className="pizza-container mainpage-icon-container">
-              <img className="mainpage-icon-container__icon" src={Pizza}></img>
+              <img 
+                className="mainpage-icon-container__icon" 
+                src={Pizza}></img>
               <img
                 className="mainpage-icon-container__icon-hover"
                 src={PizzaHover}
               ></img>
             </div>
             <div className="burger-container mainpage-icon-container">
-              <img className="mainpage-icon-container__icon" src={Burger}></img>
+              <img 
+                className="mainpage-icon-container__icon" 
+                src={Burger}></img>
               <img
                 className="mainpage-icon-container__icon-hover"
                 src={BurgerHover}
               ></img>
             </div>
             <div className="beer-container mainpage-icon-container">
-              <img className="mainpage-icon-container__icon" src={Beer}></img>
+              <img 
+                className="mainpage-icon-container__icon" 
+                src={Beer}></img>
               <img
                 className="mainpage-icon-container__icon-hover"
                 src={BeerHover}
               ></img>
             </div>
           </div>
-          <h2 className="mainpage-content__h2 mainpage-content__h2_stocks">
+          <h2 className="mainpage-content__h2 mainpage-content__h2_stocks" id='stocks'>
             АКЦИИ
           </h2>
           <div className="mainpage-content__stocks">
@@ -68,7 +75,7 @@ function MainPage() {
               ></img>
             </div>
           </div>
-          <h2 className="mainpage-content__h2 mainpage-content__h2_about">
+          <h2 className="mainpage-content__h2 mainpage-content__h2_about" id='about'>
             О НАС
           </h2>
           <div className="mainpage-content__about">
@@ -80,7 +87,7 @@ function MainPage() {
               Приходи к нам!
             </p>
           </div>
-          <h2 className="mainpage-content__h2 mainpage-content__h2_contacts">
+          <h2 className="mainpage-content__h2 mainpage-content__h2_contacts" id='contacts'>
             КОНТАКТЫ
           </h2>
           <div className="mainpage-content__contacts">

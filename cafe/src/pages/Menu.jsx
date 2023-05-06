@@ -1,6 +1,8 @@
 import "../sass/menu/main.sass";
 import BearSVG from "../img/Bear.svg";
 import BearMidl from "../img/Bear-midl.svg";
+import { HashLink as Link } from "react-router-hash-link";
+
 function Menu() {
   return (
     <>
@@ -21,24 +23,24 @@ function Menu() {
             <div className="nav">
               <ul className="nav__list">
                 <li className="nav__item">
-                  <a href="/mainpage/" className="nav__link">
+                  <a href="/mainpage" className="nav__link">
                     ГЛАВНАЯ
                   </a>
                 </li>
                 <li className="nav__item">
-                  <a href="#" className="nav__link">
+                  <Link to='/mainpage#stocks' className="nav__link">
                     АКЦИИ
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav__item">
-                  <a href="#" className="nav__link">
+                  <Link to="mainpage#about" className="nav__link">
                     О НАС
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav__item">
-                  <a href="#" className="nav__link">
+                  <Link to='mainpage#contacts' className="nav__link">
                     КОНТАКТЫ
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav__item">
                   <a href="#" className="nav__link">
