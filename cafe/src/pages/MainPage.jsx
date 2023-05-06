@@ -27,10 +27,12 @@ function MainPage() {
           <div className="mainpage-content__icons">
             <div className="pizza-container mainpage-icon-container">
               <img className="mainpage-icon-container__icon" src={Pizza}></img>
-              <img
-                className="mainpage-icon-container__icon-hover"
-                src={PizzaHover}
-              ></img>
+              <a href="/pizzapage/">
+                <img
+                  src={PizzaHover}
+                  className="mainpage-icon-container__icon-hover"
+                ></img>
+              </a>
             </div>
             <div className="burger-container mainpage-icon-container">
               <img className="mainpage-icon-container__icon" src={Burger}></img>
