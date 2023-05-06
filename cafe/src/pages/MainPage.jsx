@@ -12,9 +12,9 @@ function MainPage() {
     return (
       <>
         <div className='main'>
-            <div className='mainpage-sidebar'>
-                <button className="mainpage-sidebar__hamburger"/>
-            </div>
+            <sidebar className='mainpage-sidebar'>
+                <a href='/' className="mainpage-sidebar__hamburger"/>
+            </sidebar>
             <header className='mainpage-header'>
                 <h1 className='mainpage-header__h1'>
                     Подкрепление
