@@ -12,7 +12,7 @@ import StocksRightImg from "../img/mainpage-stocks-right.png";
 function MainPage() {
   return (
     <>
-      <div className="main">
+      <div className="mainpage-main">
         <div className="mainpage-sidebar">
           <a href="/" className="mainpage-sidebar__hamburger" />
         </div>

@@ -1,5 +1,6 @@
-import Menu from '../pages/Menu.jsx'
+import Menu from '../pages/Menu.jsx';
 import MainPage from '../pages/MainPage.jsx';
+import Profile from '../pages/Profile.jsx';
 const MainPageStocks = document.getElementById('mainpage-content-stocks');
 const MainPageAbout = document.getElementById('mainpage-content-about');
 const MainPageContacts = document.getElementById('.mainpage-content-contacts');
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
         path: 'mainpage#contacts',
         element: MainPageContacts,
     },
+    {
+        path: 'profile/',
+        element: <Profile/>,
+    }
 ]);
 
 function MyRouter() {

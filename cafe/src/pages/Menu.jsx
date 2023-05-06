@@ -23,9 +23,9 @@ function Menu() {
             <div className="nav">
               <ul className="nav__list">
                 <li className="nav__item">
-                  <a href="/mainpage" className="nav__link">
+                  <Link to="/mainpage" className="nav__link">
                     ГЛАВНАЯ
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav__item">
                   <Link to='/mainpage#stocks' className="nav__link">
@@ -43,9 +43,9 @@ function Menu() {
                   </Link>
                 </li>
                 <li className="nav__item">
-                  <a href="#" className="nav__link">
+                  <Link to="profile/" className="nav__link">
                     МОЙ АККАУНТ
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
