@@ -27,34 +27,33 @@ function MainPage() {
           </h2>
           <div className="mainpage-content__icons">
             <div className="pizza-container mainpage-icon-container">
-              <img 
-                className="mainpage-icon-container__icon" 
-                src={Pizza}></img>
-              <img
-                className="mainpage-icon-container__icon-hover"
-                src={PizzaHover}
-              ></img>
+              <img className="mainpage-icon-container__icon" src={Pizza}></img>
+              <a href="/pizzapage/">
+                <img
+                  src={PizzaHover}
+                  className="mainpage-icon-container__icon-hover"
+                ></img>
+              </a>
             </div>
             <div className="burger-container mainpage-icon-container">
-              <img 
-                className="mainpage-icon-container__icon" 
-                src={Burger}></img>
+              <img className="mainpage-icon-container__icon" src={Burger}></img>
               <img
                 className="mainpage-icon-container__icon-hover"
                 src={BurgerHover}
               ></img>
             </div>
             <div className="beer-container mainpage-icon-container">
-              <img 
-                className="mainpage-icon-container__icon" 
-                src={Beer}></img>
+              <img className="mainpage-icon-container__icon" src={Beer}></img>
               <img
                 className="mainpage-icon-container__icon-hover"
                 src={BeerHover}
               ></img>
             </div>
           </div>
-          <h2 className="mainpage-content__h2 mainpage-content__h2_stocks" id='stocks'>
+          <h2
+            className="mainpage-content__h2 mainpage-content__h2_stocks"
+            id="stocks"
+          >
             АКЦИИ
           </h2>
           <div className="mainpage-content__stocks">
@@ -75,7 +74,10 @@ function MainPage() {
               ></img>
             </div>
           </div>
-          <h2 className="mainpage-content__h2 mainpage-content__h2_about" id='about'>
+          <h2
+            className="mainpage-content__h2 mainpage-content__h2_about"
+            id="about"
+          >
             О НАС
           </h2>
           <div className="mainpage-content__about">
@@ -87,7 +89,10 @@ function MainPage() {
               Приходи к нам!
             </p>
           </div>
-          <h2 className="mainpage-content__h2 mainpage-content__h2_contacts" id='contacts'>
+          <h2
+            className="mainpage-content__h2 mainpage-content__h2_contacts"
+            id="contacts"
+          >
             КОНТАКТЫ
           </h2>
           <div className="mainpage-content__contacts">
