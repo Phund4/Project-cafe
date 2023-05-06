@@ -12,7 +12,7 @@ $background-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.32) 0%, rgba
         @media only screen and (max-width: 1024px)
             @content
     @if $breakpoint == big-screen
-        @media only screen and (max-width: 1500px)
+        @media only screen and (max-width: 1340px)
             @content
     
 *, ::after, ::before
@@ -22,6 +22,14 @@ $background-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.32) 0%, rgba
 
 html
     font-size: 62.5%
+    @include respond(big-screen)
+        font-size: 55%
+    @include respond(tab-land)
+        font-size: 50.5%
+    @include respond(tab-port)
+        font-style: 45%
+    @include respond(phone)
+        font-size: 40%
     
 body
     font-family: 'Inter', sans-serif

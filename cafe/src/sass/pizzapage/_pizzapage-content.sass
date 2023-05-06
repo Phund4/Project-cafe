@@ -1,0 +1,39 @@
+.main-pizzapage-content
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    margin-top: -57.5rem
+    &__icons
+        display: flex
+        flex-direction: row
+        align-items: center
+        .main-pizzapage-icon-container
+            display: flex
+            justify-content: center
+            align-items: center
+            position: relative
+            img
+                position: absolute
+            &__icon-hover
+                opacity: 0
+                filter: alpha(opacity=0)
+            &:hover
+                .main-pizzapage-icon-container__icon
+                    opacity: 0
+                    filter: alpha(opacity=0)
+                .main-pizzapage-icon-container__icon-hover
+                    top: -1px
+                    left: -1px
+                    opacity: 1
+                    filter: alpha(opacity=100)
+        .pizza-container
+            width: 19.5rem
+            height: 23.5rem
+            margin-right: 2.4rem
+        .burger-container
+            width: 20rem
+            height: 20rem
+        .beer-container
+            width: 24rem
+            height: 23.7rem

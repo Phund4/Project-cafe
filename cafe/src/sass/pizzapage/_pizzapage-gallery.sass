@@ -1,0 +1,22 @@
+.main-pizzapage-gallery
+    display: grid
+    width: 100%
+    grid-column: full-start / full-end
+    grid-template-columns: repeat(3, 1fr)
+    grid-tomplate-rows: repeat(3, 1fr)
+    grid-gap: 9rem 
+    padding: 6rem
+    &__item
+        align-self: center
+        justify-self: center
+    &__item-7
+        grid-column: 2 / 3
+        grid-row: 3 / 3 
+    &__h2
+        margin-left: 25%
+        background-color: $color-white
+        width: 50%
+        border: 1px solid $color-white
+        padding: 3px
+        border-radius: 90px
+        text-align: center
