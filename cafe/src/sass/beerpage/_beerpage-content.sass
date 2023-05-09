@@ -1,0 +1,59 @@
+.main-beerpage-content
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    margin-top: -57.5rem
+    @include respond(phone)
+        margin-top: -60rem
+    &__icons
+        display: flex
+        flex-direction: row
+        align-items: center
+        .main-beerpage-icon-container
+            display: flex
+            justify-content: center
+            align-items: center
+            position: relative
+            img
+                position: absolute
+                @include respond(big-screen)
+                    height: 80%
+                @include respond(tab-land)
+                    height: 70%
+                @include respond(tab-port)
+                    height: 50.5%
+                @include respond(phone)
+                    height: 55%
+            &__icon-hover
+                opacity: 0
+                filter: alpha(opacity=0)
+            &:hover
+                .main-beerpage-icon-container__icon
+                    opacity: 0
+                    filter: alpha(opacity=0)
+                .main-beerpage-icon-container__icon-hover
+                    top: -1px
+                    left: -1px
+                    opacity: 1
+                    filter: alpha(opacity=100)
+        .pizza-container
+            width: 19.5rem
+            height: 23.5rem
+            margin-right: 2.4rem
+            @include respond(phone)
+                width: 12rem
+        .burger-container
+            width: 20rem
+            height: 20rem
+            @include respond(tab-port)
+                width: 10rem
+            @include respond(phone)
+                width: 12rem
+        .beer-container
+            width: 24rem
+            height: 23.7rem
+            @include respond(phone)
+                width: 12rem
+            @include respond(tab-port)
+                width: 12rem

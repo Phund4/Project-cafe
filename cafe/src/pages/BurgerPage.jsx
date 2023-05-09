@@ -13,6 +13,7 @@ import Burger4 from "../img/burger-4.png";
 import Burger5 from "../img/burger-5.png";
 import Burger6 from "../img/burger-6.png";
 import Burger7 from "../img/burger-7.png";
+import Burger8 from "../img/burger-8.png";
 function BurgerPage() {
   return (
     <>
@@ -60,10 +61,12 @@ function BurgerPage() {
                 className="main-burgerpage-icon-container__icon"
                 src={Beer}
               ></img>
-              <img
-                className="main-burgerpage-icon-container__icon-hover"
-                src={BeerHover}
-              ></img>
+              <a href="/beerpage/">
+                <img
+                  className="main-burgerpage-icon-container__icon-hover"
+                  src={BeerHover}
+                ></img>
+              </a>
             </div>
           </div>
         </div>
@@ -123,6 +126,14 @@ function BurgerPage() {
               className="main-burgerpage-gallery__img"
             />
             <h2 className="main-burgerpage-gallery__h2">340</h2>
+          </div>
+          <div className="main-burgerpage-gallery__item main-burgerpage-gallery__item-8">
+            <img
+              src={Burger8}
+              alt="бургер двойной"
+              className="main-burgerpage-gallery__img"
+            />
+            <h2 className="main-burgerpage-gallery__h2">410</h2>
           </div>
         </div>
       </div>

@@ -60,10 +60,12 @@ function PizzaPage() {
                 className="main-pizzapage-icon-container__icon"
                 src={Beer}
               ></img>
-              <img
-                className="main-pizzapage-icon-container__icon-hover"
-                src={BeerHover}
-              ></img>
+              <a href="/beerpage/">
+                <img
+                  className="main-pizzapage-icon-container__icon-hover"
+                  src={BeerHover}
+                ></img>
+              </a>
             </div>
           </div>
         </div>
