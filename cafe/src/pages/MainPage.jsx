@@ -36,10 +36,12 @@ function MainPage() {
             </div>
             <div className="burger-container mainpage-icon-container">
               <img className="mainpage-icon-container__icon" src={Burger}></img>
-              <img
-                className="mainpage-icon-container__icon-hover"
-                src={BurgerHover}
-              ></img>
+              <a href="/burgerpage/">
+                <img
+                  className="mainpage-icon-container__icon-hover"
+                  src={BurgerHover}
+                ></img>
+              </a>
             </div>
             <div className="beer-container mainpage-icon-container">
               <img className="mainpage-icon-container__icon" src={Beer}></img>
