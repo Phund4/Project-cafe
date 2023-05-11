@@ -48,20 +48,24 @@ function PizzaPage() {
                 className="main-pizzapage-icon-container__icon"
                 src={Burger}
               ></img>
-              <img
-                className="main-pizzapage-icon-container__icon-hover"
-                src={BurgerHover}
-              ></img>
+              <a href="/burgerpage/">
+                <img
+                  className="main-pizzapage-icon-container__icon-hover"
+                  src={BurgerHover}
+                ></img>
+              </a>
             </div>
             <div className="beer-container main-pizzapage-icon-container">
               <img
                 className="main-pizzapage-icon-container__icon"
                 src={Beer}
               ></img>
-              <img
-                className="main-pizzapage-icon-container__icon-hover"
-                src={BeerHover}
-              ></img>
+              <a href="/beerpage/">
+                <img
+                  className="main-pizzapage-icon-container__icon-hover"
+                  src={BeerHover}
+                ></img>
+              </a>
             </div>
           </div>
         </div>

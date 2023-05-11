@@ -1,0 +1,24 @@
+.main-beerpage-sidebar
+    position: absolute
+    top: 51px
+    left: 71px
+    z-index: 100
+    width: min-content
+    @include respond(phone)
+        top: 20px
+        left: 20px
+    @include respond(tab-port)
+        top:20px
+        left: 20px
+    &__hamburger
+        display: block
+        border: none
+        z-index: 100
+        width: 7.1rem
+        height: 7.1rem
+        background: transparent
+        background-image: url(../../img/hamburger-black.svg)
+        @include respond(phone)
+            height: 70px
+        @include respond(tab-port)
+            height: 80px
