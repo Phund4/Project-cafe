@@ -51,15 +51,15 @@ const router = createBrowserRouter([
     {
         path: "pizzapage/",
         element: <PizzaPage />,
-      },
-      {
+    },
+    {
         path: "/burgerpage/",
         element: <BurgerPage />,
-      },
-      {
+    },
+    {
         path: "/beerpage/",
         element: <BeerPage />,
-      },
+    },
 ]);
 
 function MyRouter() {
