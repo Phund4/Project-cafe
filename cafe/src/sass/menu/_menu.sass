@@ -19,7 +19,7 @@
     &__logo1
         position: absolute
         top: 60px
-        left: 604px
+        left: 600px
         @include respond(big-screen)
             display: none
         
@@ -62,14 +62,16 @@
         display: flex
         flex-flow: column wrap
         line-height: 3.8rem
-        width: 100%
+        width: min-content
         justify-content: center
+        margin-left: 3.8rem
         @include respond(phone)
             top: 5rem
             text-align: center
     &__item
         margin: 0.8rem
         z-index: 2
+        width: min-content
         @include respond(phone)
             text-shadow: 0px 4px 4px $color-white
             margin: 10px

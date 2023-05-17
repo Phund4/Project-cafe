@@ -1,12 +1,11 @@
 import '../sass/profile/main.sass'
 import ProfileHuman from '../img/profile-human.svg'
+import SidebarBurger from '../components/SidebarBurger/SidebarBurger';
 function Profile() {
     return (
         <>
             <div className='profile-main'>
-                <div className="profile-sidebar">
-                    <a href="/" className="profile-sidebar__hamburger" />
-                </div>
+                <SidebarBurger/>
                 <header className="profile-header">
                     <h1 className="profile-header__h1-blur">Подкрепление</h1>
                     <div className='profile-header__h2'>
