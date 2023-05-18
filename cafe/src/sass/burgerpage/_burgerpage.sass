@@ -1,8 +1,19 @@
-
 @import 'burgerpage-sidebar'
 @import 'burgerpage-header'
 @import 'burgerpage-content'
 @import 'burgerpage-gallery'
+
+html
+    font-size: 62.5%
+    @include respond(big-screen)
+        font-size: 55%
+    @include respond(tab-land)
+        font-size: 50.5%
+    @include respond(tab-port)
+        font-style: 45%
+    @include respond(phone)
+        font-size: 40%
+
 .main-burgerpage
     min-width: 100vw
     min-height: 100vh

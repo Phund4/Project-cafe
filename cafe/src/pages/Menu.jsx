@@ -28,23 +28,23 @@ function Menu() {
                   </Link>
                 </li>
                 <li className="main-menupage-nav__item">
-                  <Link to="#" className="main-menupage-nav__link">
+                  <Link to="/mainpage#stocks" className="main-menupage-nav__link">
                     АКЦИИ
                   </Link>
                 </li>
                 <li className="main-menupage-nav__item">
-                  <Link to="#" className="main-menupage-nav__link">
-                    О НАС
+                  <Link to="mainpage#about" className="main-menupage-nav__link">
+                    О&nbsp;НАС
                   </Link>
                 </li>
                 <li className="main-menupage-nav__item">
-                  <Link to="#" className="main-menupage-nav__link">
+                  <Link to="mainpage#contacts" className="main-menupage-nav__link">
                     КОНТАКТЫ
                   </Link>
                 </li>
                 <li className="main-menupage-nav__item">
-                  <Link to="#" className="main-menupage-nav__link">
-                    МОЙ АККАУНТ
+                  <Link to="profile/" className="main-menupage-nav__link">
+                    МОЙ&nbsp;АККАУНТ
                   </Link>
                 </li>
               </ul>

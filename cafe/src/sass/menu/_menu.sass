@@ -17,11 +17,9 @@
         background: url('../../img/Group21.svg') repeat
         background-position: 50%
     &__logo1
-        width: 58vw
-        height: 75vh
         position: absolute
-        top: 110px
-        left: 604px
+        top: 60px
+        left: 600px
         @include respond(big-screen)
             display: none
         
@@ -64,14 +62,16 @@
         display: flex
         flex-flow: column wrap
         line-height: 3.8rem
-        width: 100%
+        width: min-content
         justify-content: center
+        margin-left: 3.8rem
         @include respond(phone)
             top: 5rem
             text-align: center
     &__item
         margin: 0.8rem
         z-index: 2
+        width: min-content
         @include respond(phone)
             text-shadow: 0px 4px 4px $color-white
             margin: 10px
