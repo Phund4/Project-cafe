@@ -1,5 +1,6 @@
 import Menu from "../pages/Menu.jsx";
 import MainPage from "../pages/MainPage.jsx";
+import Profile from '../pages/Profile.jsx';
 import PizzaPage from "../pages/PizzaPage.jsx";
 import BurgerPage from "../pages/BurgerPage.jsx";
 import BeerPage from "../pages/BeerPage.jsx";
@@ -15,7 +16,11 @@ const router = createBrowserRouter([
     element: <MainPage />,
   },
   {
-    path: "/pizzapage/",
+    path: 'profile/',
+    element: <Profile/>,
+  },
+  {
+    path: "pizzapage/",
     element: <PizzaPage />,
   },
   {
