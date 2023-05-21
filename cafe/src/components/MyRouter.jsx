@@ -7,6 +7,8 @@ import PizzaPage from "../pages/PizzaPage.jsx";
 import BurgerPage from "../pages/BurgerPage.jsx";
 import BeerPage from "../pages/BeerPage.jsx";
 import Authorization from "../pages/Authorization.jsx";
+import Password from "../pages/Password.jsx";
+import Email from "../pages/Email.jsx";
 const MainPageStocks = document.getElementById("mainpage-content-stocks");
 const MainPageAbout = document.getElementById("mainpage-content-about");
 const MainPageContacts = document.getElementById(".mainpage-content-contacts");
@@ -61,6 +63,14 @@ const router = createBrowserRouter([
   {
     path: "/authorization/",
     element: <Authorization />,
+  },
+  {
+    path: "/password/",
+    element: <Password />,
+  },
+  {
+    path: "/email/",
+    element: <Email />,
   },
 ]);
 

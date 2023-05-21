@@ -37,7 +37,7 @@ function Authorization() {
           />
         </div>
         <button className="authorization-button">
-          <Link to="#" className="authorization-button__link">
+          <Link to="/password/" className="authorization-button__link">
             ВОЙТИ
           </Link>
         </button>
