@@ -15,7 +15,7 @@ function Password() {
           <Field type="password" id="password-field-name" />
         </div>
         <button className="password-button">
-          <Link to="/email/" className="password-button__link">
+          <Link to="/mainpage/" className="password-button__link">
             ПРОДОЛЖИТЬ
           </Link>
         </button>

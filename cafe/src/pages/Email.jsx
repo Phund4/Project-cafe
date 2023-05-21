@@ -15,7 +15,7 @@ function Email() {
           <Field type="email" id="email-field-name" />
         </div>
         <button className="email-button">
-          <Link to="#" className="email-button__link">
+          <Link to="/code/" className="email-button__link">
             ПРОДОЛЖИТЬ
           </Link>
         </button>

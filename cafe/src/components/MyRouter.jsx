@@ -9,6 +9,7 @@ import BeerPage from "../pages/BeerPage.jsx";
 import Authorization from "../pages/Authorization.jsx";
 import Password from "../pages/Password.jsx";
 import Email from "../pages/Email.jsx";
+import Code from "../pages/Code.jsx";
 const MainPageStocks = document.getElementById("mainpage-content-stocks");
 const MainPageAbout = document.getElementById("mainpage-content-about");
 const MainPageContacts = document.getElementById(".mainpage-content-contacts");
@@ -71,6 +72,10 @@ const router = createBrowserRouter([
   {
     path: "/email/",
     element: <Email />,
+  },
+  {
+    path: "/code/",
+    element: <Code />,
   },
 ]);
 
