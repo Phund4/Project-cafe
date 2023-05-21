@@ -12,7 +12,7 @@ function Code() {
           <h1 className="code-header__h1">ВВЕДИТЕ КОД</h1>
         </header>
         <div className="code-content">
-          <Field type="code" id="code-field-name" />
+          <Field type="text" id="code-field-name" />
         </div>
         <button className="code-button">
           <Link to="/profile/" className="code-button__link">
