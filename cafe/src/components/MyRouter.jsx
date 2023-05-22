@@ -10,6 +10,7 @@ import Authorization from "../pages/Authorization.jsx";
 import Password from "../pages/Password.jsx";
 import Email from "../pages/Email.jsx";
 import Code from "../pages/Code.jsx";
+import StartMob from "../pages/StartMob.jsx";
 const MainPageStocks = document.getElementById("mainpage-content-stocks");
 const MainPageAbout = document.getElementById("mainpage-content-about");
 const MainPageContacts = document.getElementById(".mainpage-content-contacts");
@@ -18,7 +19,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/menu/",
     element: <Menu />,
   },
   {
@@ -76,6 +77,10 @@ const router = createBrowserRouter([
   {
     path: "/code/",
     element: <Code />,
+  },
+  {
+    path: "/",
+    element: <StartMob />,
   },
 ]);
 

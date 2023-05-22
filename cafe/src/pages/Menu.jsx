@@ -9,7 +9,9 @@ function Menu() {
       <div className="main-menupage">
         <div className="main-menupage-menu">
           <div className="main-menupage-sidebar">
-            <button className="main-menupage-sidebar__hamburger"></button>
+            <Link to="/">
+              <button className="main-menupage-sidebar__hamburger"></button>
+            </Link>
           </div>
           <div className="main-menupage-menu__logo1">
             <img src={BearSVG} />
@@ -29,20 +31,23 @@ function Menu() {
                 </li>
                 <li className="main-menupage-nav__item">
                   <Link
-                    to="/mainpage#stocks"
+                    to="../mainpage#stocks"
                     className="main-menupage-nav__link"
                   >
                     АКЦИИ
                   </Link>
                 </li>
                 <li className="main-menupage-nav__item">
-                  <Link to="mainpage#about" className="main-menupage-nav__link">
+                  <Link
+                    to="../mainpage#about"
+                    className="main-menupage-nav__link"
+                  >
                     О&nbsp;НАС
                   </Link>
                 </li>
                 <li className="main-menupage-nav__item">
                   <Link
-                    to="mainpage#contacts"
+                    to="../mainpage#contacts"
                     className="main-menupage-nav__link"
                   >
                     КОНТАКТЫ
