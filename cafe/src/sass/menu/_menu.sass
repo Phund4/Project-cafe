@@ -15,7 +15,7 @@
     z-index: 1
     @include respond(phone)
         background: url('../../img/Group21.svg') repeat
-        background-position: 50%
+        background-position: 50% 25%
     &__logo1
         position: absolute
         top: 60px
@@ -41,7 +41,7 @@
         width: 100%
         margin-left: auto
         margin-right: auto
-        margin-top: calc(50vh - 220px)
+        margin-top: calc(50vh - 230px)
         height: 301px
         &__logo1
             display: block
@@ -66,15 +66,16 @@
         justify-content: center
         margin-left: 3.8rem
         @include respond(phone)
-            top: 5rem
-            text-align: center
+            top: 4.5rem
+            left: 10%
     &__item
-        margin: 0.8rem
+        margin: 0.6rem
         z-index: 2
         width: min-content
         @include respond(phone)
             text-shadow: 0px 4px 4px $color-white
-            margin: 10px
+            margin-left: auto
+            margin-right: auto
             font-size: 32px
     &__link
         &:link, &:visited
