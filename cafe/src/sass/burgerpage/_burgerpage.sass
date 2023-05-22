@@ -18,3 +18,7 @@ html
     min-width: 100vw
     min-height: 100vh
     background: $background-gradient
+    @include respond(tab-port)
+        background: $color-white
+    @include respond(phone)
+        background: $color-white
