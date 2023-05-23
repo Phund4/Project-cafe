@@ -12,6 +12,8 @@ import Email from "../pages/Email.jsx";
 import Code from "../pages/Code.jsx";
 import StartMob from "../pages/StartMob.jsx";
 import About from "../pages/About.jsx";
+import Contacts from "../pages/Contacts.jsx";
+import Stocks from "../pages/Stocks.jsx";
 const MainPageStocks = document.getElementById("mainpage-content-stocks");
 const MainPageAbout = document.getElementById("mainpage-content-about");
 const MainPageContacts = document.getElementById(".mainpage-content-contacts");
@@ -86,6 +88,14 @@ const router = createBrowserRouter([
   {
     path: "/about/",
     element: <About />,
+  },
+  {
+    path: "/contacts/",
+    element: <Contacts />,
+  },
+  {
+    path: "/stocks/",
+    element: <Stocks />,
   },
 ]);
 
