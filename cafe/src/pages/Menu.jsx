@@ -1,6 +1,9 @@
 import "../sass/menu/main.sass";
 import BearSVG from "../img/Bear.svg";
 import BearMidl from "../img/Bear-midl.svg";
+import CheckWidthCont from "../components/CheckWidth/CheckWidthCont";
+import CheckWidthStocks from "../components/CheckWidth/CheckWidthStocks";
+import CheckWidthAbout from "../components/CheckWidth/CheckWidthAbout";
 import { HashLink as Link } from "react-router-hash-link";
 
 function Menu() {
@@ -30,28 +33,22 @@ function Menu() {
                   </Link>
                 </li>
                 <li className="main-menupage-nav__item">
-                  <Link
-                    to="../mainpage#stocks"
+                  <CheckWidthStocks
+                    text="АКЦИИ"
                     className="main-menupage-nav__link"
-                  >
-                    АКЦИИ
-                  </Link>
+                  ></CheckWidthStocks>
                 </li>
                 <li className="main-menupage-nav__item">
-                  <Link
-                    to="../mainpage#about"
+                  <CheckWidthAbout
+                    text="О&nbsp;НАС"
                     className="main-menupage-nav__link"
-                  >
-                    О&nbsp;НАС
-                  </Link>
+                  ></CheckWidthAbout>
                 </li>
                 <li className="main-menupage-nav__item">
-                  <Link
-                    to="../mainpage#contacts"
+                  <CheckWidthCont
+                    text="КОНТАКТЫ"
                     className="main-menupage-nav__link"
-                  >
-                    КОНТАКТЫ
-                  </Link>
+                  ></CheckWidthCont>
                 </li>
                 <li className="main-menupage-nav__item">
                   <Link to="/login/" className="main-menupage-nav__link">

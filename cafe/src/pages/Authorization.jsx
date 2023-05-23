@@ -1,6 +1,8 @@
 import "../sass/authorization/main.sass";
 import LoginBear from "../img/login-bear.svg";
 import Field from "../components/Field/Field";
+import EmptyInput from "../components/EmptyInput/EmptyInput";
+import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
 
 function Authorization() {
@@ -37,9 +39,14 @@ function Authorization() {
           />
         </div>
         <button className="authorization-button">
-          <Link to="/password/" className="authorization-button__link">
+          <EmptyInput
+            link="/#/"
+            text="ВХОД"
+            className="authorization-button__link-v1"
+          />
+          {/* <Link to="/password/" className="authorization-button__link">
             ВОЙТИ
-          </Link>
+          </Link> */}
         </button>
       </div>
     </>
