@@ -4,7 +4,7 @@ import { HashLink as Link } from "react-router-hash-link";
 function CheckWidthAbout({ text, className }) {
   if (window.innerWidth <= 830) {
     return (
-      <Link to="/#/" className={className}>
+      <Link to="/about/" className={className}>
         {text}
       </Link>
     );
