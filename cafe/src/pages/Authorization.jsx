@@ -203,7 +203,7 @@ function Authorization() {
                         text="Введите пароль"/>
                 </div>
                 <button className="authorization-button" onClick={createUser}>
-                    <p className="authorization-button__link-v1">
+                    <p className="authorization-button__link">
                         Зарегистрироваться
                     </p>
                     {/* <EmptyInput
