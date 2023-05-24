@@ -15,10 +15,27 @@
         color: $color-black
         text-shadow: 0px 4px 33px #000000
         -webkit-text-stroke: 4px $color-white
-        @include respond(phone)
-            margin-top: 7rem
+        @include respond(big-screen)
+            margin-top: -3rem
+        @include respond(tab-land)
+            margin-top: -4rem
         @include respond(tab-port)
             margin-top: 5rem
+            font-weight: 700
+            line-height: 77px
+            margin-top: 7rem
+            font-size: 92px
+            text-shadow: 0px 4px 4px #FF9900
+            -webkit-text-stroke: 0px
+            text-transform: lowercase
+        @include respond(phone)
+            font-weight: 700
+            line-height: 77px
+            margin-top: 7rem
+            font-size: 64px
+            text-shadow: 0px 4px 4px #FF9900
+            -webkit-text-stroke: 0px
+            text-transform: lowercase
     &__h1-blur
         font-size: 12rem
         font-weight: 800
@@ -27,11 +44,16 @@
         color: $color-black
         filter: blur(6px)
         -webkit-text-stroke: 8px $color-white
+        @include respond(big-screen)
+            margin-top: -4rem
+            margin-left: 4rem
+            font-size: 10rem
+        @include respond(tab-land)
+            margin-top: -4rem
+            font-size: 8rem
+            filter: blur(4.5px)
         @include respond(tab-port)
             display: none
-        @include respond(tab-land)
-            font-size: 10rem
-            filter: blur(4.5px)
         @include respond(phone)
             display: none
     &__img
@@ -42,9 +64,13 @@
         height: 94rem
         margin-top: -37.4rem
         opacity: 0.3
-        @include respond(phone)
-            width:  50rem
-            margin-top: -50rem
-            margin-bottom: 10rem
+        @include respond(tab-land)
+            width: 60rem
         @include respond(tab-port)
-            width: 40rem
+            width: 30rem
+            margin-top: -48rem
+            margin-bottom: 10rem
+        @include respond(phone)
+            width: 25rem
+            margin-top: -48rem
+            margin-bottom: 10rem

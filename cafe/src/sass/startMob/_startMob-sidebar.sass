@@ -1,9 +1,9 @@
-.profile-sidebar
+.startMob-sidebar
     position: absolute
-    top: 38px
-    left: 72px
+    top: 75rem
     z-index: 100
     width: min-content
+    
     &__hamburger
         display: block
         border: none
@@ -12,3 +12,7 @@
         height: 7.1rem
         background: transparent
         background-image: url(../../img/hamburger-black.svg)
+        @include respond(tab-port)
+            height: 80px
+        @include respond(phone)
+            height: 70px

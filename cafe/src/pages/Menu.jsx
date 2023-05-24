@@ -1,6 +1,9 @@
 import "../sass/menu/main.sass";
 import BearSVG from "../img/Bear.svg";
 import BearMidl from "../img/Bear-midl.svg";
+import CheckWidthCont from "../components/CheckWidth/CheckWidthCont";
+import CheckWidthStocks from "../components/CheckWidth/CheckWidthStocks";
+import CheckWidthAbout from "../components/CheckWidth/CheckWidthAbout";
 import { HashLink as Link } from "react-router-hash-link";
 
 function Menu() {
@@ -9,7 +12,9 @@ function Menu() {
       <div className="main-menupage">
         <div className="main-menupage-menu">
           <div className="main-menupage-sidebar">
-            <button className="main-menupage-sidebar__hamburger"></button>
+            <Link to="/">
+              <button className="main-menupage-sidebar__hamburger"></button>
+            </Link>
           </div>
           <div className="main-menupage-menu__logo1">
             <img src={BearSVG} />
@@ -28,22 +33,25 @@ function Menu() {
                   </Link>
                 </li>
                 <li className="main-menupage-nav__item">
-                  <Link to="/mainpage#stocks" className="main-menupage-nav__link">
-                    АКЦИИ
-                  </Link>
+                  <CheckWidthStocks
+                    text="АКЦИИ"
+                    className="main-menupage-nav__link"
+                  ></CheckWidthStocks>
                 </li>
                 <li className="main-menupage-nav__item">
-                  <Link to="mainpage#about" className="main-menupage-nav__link">
-                    О&nbsp;НАС
-                  </Link>
+                  <CheckWidthAbout
+                    text="О&nbsp;НАС"
+                    className="main-menupage-nav__link"
+                  ></CheckWidthAbout>
                 </li>
                 <li className="main-menupage-nav__item">
-                  <Link to="mainpage#contacts" className="main-menupage-nav__link">
-                    КОНТАКТЫ
-                  </Link>
+                  <CheckWidthCont
+                    text="КОНТАКТЫ"
+                    className="main-menupage-nav__link"
+                  ></CheckWidthCont>
                 </li>
                 <li className="main-menupage-nav__item">
-                  <Link to="profile/" className="main-menupage-nav__link">
+                  <Link to="/login/" className="main-menupage-nav__link">
                     МОЙ&nbsp;АККАУНТ
                   </Link>
                 </li>
