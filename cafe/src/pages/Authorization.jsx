@@ -2,7 +2,6 @@
 import "../sass/authorization/main.sass";
 import LoginBear from "../img/login-bear.svg";
 import Field from "../components/Field/Field";
-import EmptyInput from "../components/EmptyInput/EmptyInput";
 import React from "react";
 import { useState, useEffect } from 'react';
 import { HashLink as Link } from "react-router-hash-link";

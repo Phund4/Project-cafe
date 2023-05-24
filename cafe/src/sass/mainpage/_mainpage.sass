@@ -1,5 +1,6 @@
-@import 'mainpage-header'
-@import 'mainpage-content'
+@import 'mainpage-header.sass'
+@import 'mainpage-content.sass'
+@import 'mainpage-sidebar.sass'
 
 .mainpage-main
     min-width: 100vw
@@ -11,3 +12,7 @@
     align-items: center
     flex-direction: column
     z-index: -100
+    @include respond(phone)
+        background: $color-white
+    @include respond(tab-port)
+        background: $color-white
