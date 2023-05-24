@@ -1,0 +1,72 @@
+.profile-content
+    &__field
+        &__p 
+            font-weight: 700
+            font-size: 5rem
+            line-height: 6.1rem
+            color: $color-black
+            padding: 1rem
+            @include respond(tab-land)
+                font-size: 4rem
+                line-height: 5.1rem
+            @include respond(tab-port)
+                font-weight: 700
+                font-size: 1.6rem
+                line-height: 19px
+                color: $color-black
+                padding: 0
+            @include respond(phone)
+                font-weight: 700
+                font-size: 1.6rem
+                line-height: 19px
+                color: $color-black
+                padding: 0
+        &__input
+            font-weight: 700
+            line-height: 48px
+            color: $color-black
+            width: 65rem
+            height: 10rem
+            border: 1px solid #FF9900
+            border-radius: 30px
+            padding-left: 2.4rem
+            margin-bottom: 2.5rem
+            box-shadow: 0px 4px 9px 1px #816C00
+            background: rgba(255, 255, 255, 0.6)
+            font-size: 6rem
+            @include respond(tab-land)
+                font-size: 4rem
+                line-height: 5.1rem
+            @include respond(tab-port)
+                font-size: 1.6rem
+                font-weight: 700
+                line-height: 19px
+                color: $color-black
+                width: 22.6rem
+                height: 3.5rem
+                border: 1px solid $color-white
+                border-radius: 30px
+                padding-left: 2.4rem
+                margin-bottom: 2.5rem
+                box-shadow: 0px 4px 4px 1px rgba($box-shadow-yellow, 0.62)
+            @include respond(phone)
+                font-size: 1.6rem
+                font-weight: 700
+                line-height: 19px
+                color: $color-black
+                width: 22.6rem
+                height: 3.5rem
+                border: 1px solid $color-white
+                border-radius: 30px
+                padding-left: 2.4rem
+                margin-bottom: 2.5rem
+                box-shadow: 0px 4px 4px 1px rgba($box-shadow-yellow, 0.62)
+            &:invalid
+                box-shadow: 0px 4px 8px 2px $box-shadow-red
+
+
+.profile-berger
+    &__img
+        height: 19.2rem
+        @include respond(tab-port)
+            height: 7rem

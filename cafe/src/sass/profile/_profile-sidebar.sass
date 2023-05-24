@@ -1,22 +1,20 @@
-.mainpage-sidebar
+.profile-sidebar
     position: absolute
-    top: 51px
-    left: 112px
+    top: 70px
+    left: 50px
     z-index: 100
     width: min-content
     @include respond(big-screen)
-        top: 30px
+        top: 60px
         left: 30px
     @include respond(tab-land)
         top: 20px
-        left: 20px
+        left: 30px
     @include respond(tab-port)
-        left: calc(50% - 3.5rem)
-        top: 90vh
+        display: none
     @include respond(phone)
-        left: calc(50% - 3.5rem)
-        top: 110vh
-
+        display: none
+    
     &__hamburger
         display: block
         border: none

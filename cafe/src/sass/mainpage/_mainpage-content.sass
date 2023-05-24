@@ -13,6 +13,9 @@
         text-shadow: 0px 4px 20px #F8F8F8
         &_menu
             margin-top: -2.1rem
+            @include respond(tab-land)
+                margin-top: 1rem
+                font-size: 11rem
             @include respond(tab-port)
                 margin-top: -17rem
                 text-transform: lowercase
@@ -29,6 +32,8 @@
                 text-shadow: 0px 4px 4px #FF9900
         &_stocks
             margin-bottom: 7rem
+            @include respond(tab-land)
+                font-size: 8.5rem
             @include respond(tab-port)
                 display: none
             @include respond(phone)
@@ -36,6 +41,8 @@
         &_about
             margin-top: 3.6rem
             margin-bottom: 1.4rem
+            @include respond(tab-land)
+                font-size: 8.5rem
             @include respond(tab-port)
                 display: none
             @include respond(phone)
@@ -43,6 +50,8 @@
         &_contacts
             margin-top: 5rem
             margin-bottom: 4.4rem
+            @include respond(tab-land)
+                font-size: 8.5rem
             @include respond(tab-port)
                 display: none
             @include respond(phone)
@@ -64,6 +73,8 @@
             position: relative
             img
                 position: absolute
+                @include respond(tab-land)
+                    height: 80%
             &__icon-hover
                 opacity: 0
                 filter: alpha(opacity=0)
@@ -98,10 +109,13 @@
         flex-direction: row
         align-items: center
         padding-left: 8rem
-        @include respond(phone)
-            display: none
+        @include respond(tab-land)
+            padding-left: 0rem
         @include respond(tab-port)
             display: none
+        @include respond(phone)
+            display: none
+        
         .mainpage-stocks-div
             display: flex
             flex-direction: column
@@ -118,6 +132,10 @@
                 text-align: center
                 color: $color-black
                 text-shadow: 0px 4px 10px $color-white
+                @include respond(tab-land)
+                    font-size: 6rem
+                    line-height: 60px
+                    margin-left: 0rem
             &__h2
                 font-size: 4rem
                 line-height: 48px
@@ -125,6 +143,8 @@
                 color: #323232
                 opacity: 0.8
                 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+                @include respond(tab-land)
+                    font-size: 2.5rem
             &__img
                 width: 25.8rem
                 height: 26.4rem
@@ -143,6 +163,10 @@
             text-align: center
             color: $color-black
             text-shadow: 0px 4px 10px $color-white
+            @include respond(tab-land)
+            font-size: 5.5rem
+            line-height: 65px
+            margin-top: 2rem
         .mainpage-about
             &__img
                 width: 35.8rem
@@ -162,11 +186,16 @@
                 text-align: center
                 color: $color-white
                 text-shadow: 0px 4px 16px rgba(0, 0, 0, 0.58)
+                @include respond(tab-land)
+                    font-size: 8rem
+                    margin-top: -2rem
             &__arrow
                 position: relative
                 width: 11.6rem
                 height: 10rem
                 margin: 20px auto
+                @include respond(tab-land)
+                    height: 8rem
                 div
                     position: relative
                     top: 20px
@@ -201,3 +230,5 @@
                 text-align: center
                 color: #FFFFFF
                 text-shadow: 0px 4px 16px rgba(0, 0, 0, 0.58)
+                @include respond(tab-land)
+                    font-size: 5.5rem

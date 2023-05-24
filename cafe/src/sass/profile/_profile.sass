@@ -1,13 +1,25 @@
 @import 'profile-content.sass'
 @import 'profile-header.sass'
+@import 'profile-field.sass'
+@import 'profile-sidebar.sass'
 
 .profile-main
-    width: 100vw
-    height: 100vh
+    // width: 100vw
+    // height: 100vh
     background-image: $background-gradient
-    background-size: 100% 100%
-    background-repeat: no-repeat
+    // background-size: 100% 100%
+    // background-repeat: no-repeat
+    // display: flex
+    // align-items: center
+    // flex-direction: column
+    // z-index: -100
+    min-width: 100vw 
+    min-height: 100vh
     display: flex
     align-items: center
     flex-direction: column
     z-index: -100
+    @include respond(tab-port)
+        background-image: none 
+    @include respond(phone)
+        background-image: none 
