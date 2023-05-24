@@ -55,7 +55,9 @@ function Login() {
                 <div className='login-content'>
                     <Field text='Почта' id='login-field-email'/>
                     <Field text='Пароль' id='login-field-password'/>
-                    <p className='login-content__registration'>Регистрация</p>
+                    <Link to='/authorization' className='login-content__registration'>
+                        Регистрация
+                    </Link>
                 </div>
                 <button className='login-button' onClick={createUser}>
                     {/* <Link to='/login/error' className="login-button__link">

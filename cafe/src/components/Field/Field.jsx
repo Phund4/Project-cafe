@@ -2,13 +2,13 @@ import "./field.sass";
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 // eslint-disable-next-line react/prop-types
-function Field({ text, type, id, placeholder }) {
+function Field({ text, type, idInput, placeholder, idText }) {
   return (
     <div className="field">
-      <p className="field__p">{text}</p>
+      <p className="field__p" id={idText}>{text}</p>
       <input
         type={type}
-        id={id}
+        id={idInput}
         placeholder={placeholder}
         className="field__input field-yellow"
       />
