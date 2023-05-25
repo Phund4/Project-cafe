@@ -24,8 +24,10 @@ function Login() {
 
     const ValidateLogin = (email, password) => {
         let list = JSON.parse(users);
+        console.log(list);
         for(let i=0; i<list.length; i++) {
-            if(list[i].mail == email && list[i].password == password) {
+            if(list[i].mail == email && 
+                list[i].password == password) {
                 return true;
             }
         }

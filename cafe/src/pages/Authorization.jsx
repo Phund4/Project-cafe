@@ -142,8 +142,8 @@ function Authorization() {
         let telephone = document.getElementById('authorization-field-phone').value;
         let email = document.getElementById('authorization-field-email').value;
         let birthday = document.getElementById('authorization-field-birthday').value;
-        let passwordUTF8 = document.getElementById('authorization-field-password').value;
-        let password = CryptoJS.AES.encrypt(passwordUTF8, '').toString();
+        let password = document.getElementById('authorization-field-password').value;
+        // let password = CryptoJS.AES.encrypt(passwordUTF8, '').toString();
         fetch('http://localhost:3000/users', {
             method: 'POST',
             headers: {
