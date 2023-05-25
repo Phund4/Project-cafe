@@ -1,3 +1,4 @@
+const CryptoJS = require('crypto-js');
 const Pool = require('pg').Pool
 require('dotenv').config();
 const pool = new Pool({
@@ -15,6 +16,10 @@ const getUsers = () => {
                 reject(error)
                 console.log('Error in model get')
             }
+            results.rows = results.rows.map(el => {
+                el.password = CryptoJS.AES.decrypt(el.password, process.env.SECRET_PASS).toString(CryptoJS.enc.Utf8);
+                return el;
+            })
             resolve(results.rows);
         })
     })
@@ -22,7 +27,7 @@ const getUsers = () => {
 
 const createUser = (body) => {
     return new Promise(function (resolve, reject) {
-        const myQuery = `insert into vhod(name, telephone, mail, birthday, password) values ('${body.name}', '${body.telephone}', '${body.email}', '${body.birthday}', '${body.password}')`;
+        const myQuery = `insert into vhod(name, telephone, mail, birthday, password) values ('${body.name}', '${body.telephone}', '${body.email}', '${body.birthday}', '${CryptoJS.AES.encrypt(body.password, process.env.SECRET_PASS).toString()}')`;
         pool.query(myQuery, (error, results) => {
             if (error) {
                 reject(error)
