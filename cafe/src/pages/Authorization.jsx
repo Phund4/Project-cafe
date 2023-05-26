@@ -5,9 +5,9 @@ import Field from "../components/Field/Field";
 import React from "react";
 import { useState, useEffect } from 'react';
 import { HashLink as Link } from "react-router-hash-link";
+import CryptoJS from 'crypto-js';
 
 function Authorization() {
-
     const [users, setUsers] = useState(false);
     useEffect(() => {
         getUser();
@@ -134,18 +134,15 @@ function Authorization() {
     }
 
     function createUser() {
+        if(!CheckName() || !CheckTelephone() || !CheckEmail() || !CheckBirthday() || !CheckPassword()) {
+            return;
+        }
         let name = document.getElementById('authorization-field-name').value;
         let telephone = document.getElementById('authorization-field-phone').value;
         let email = document.getElementById('authorization-field-email').value;
         let birthday = document.getElementById('authorization-field-birthday').value;
         let password = document.getElementById('authorization-field-password').value;
-
-        if (CheckName() && CheckTelephone() && CheckEmail() && CheckBirthday() && CheckPassword()) {
-            window.location.href = '/login'
-        } else {
-            return;
-        }
-
+        // let password = CryptoJS.AES.encrypt(passwordUTF8, '').toString();
         fetch('http://localhost:3000/users', {
             method: 'POST',
             headers: {
@@ -160,6 +157,7 @@ function Authorization() {
                 console.log(data);
                 getUser();
             });
+        window.location.href = '/login';
     }
 
     return (

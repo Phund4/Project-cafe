@@ -14,9 +14,9 @@ function MainPage() {
   return (
     <>
       <div className="mainpage-main">
-        <sidebar className="mainpage-sidebar">
+        <div className="mainpage-sidebar">
           <Link to="/menu/" className="mainpage-sidebar__hamburger" />
-        </sidebar>
+        </div>
         <header className="mainpage-header">
           <h1 className="mainpage-header__h1">Подкрепление</h1>
           <h1 className="mainpage-header__h1-blur">Подкрепление</h1>

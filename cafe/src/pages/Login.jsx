@@ -7,7 +7,6 @@ import { useState, useEffect } from 'react';
 import { HashLink as Link } from "react-router-hash-link";
 
 function Login() {
-    // eslint-disable-next-line no-unused-vars
     const [users, setUsers] = useState(false);
     useEffect(() => {
         getUser();
@@ -23,26 +22,26 @@ function Login() {
             });
     }
 
-    function createUser() {
+    const ValidateLogin = (email, password) => {
+        let list = JSON.parse(users);
+        for(let i=0; i<list.length; i++) {
+            if(list[i].mail == email && 
+                list[i].password == password) {
+                return true;
+            }
+        }
+        return false;
+    };
+
+    function LoginUser() {
         let email = document.getElementById('login-field-email').value;
         let password = document.getElementById('login-field-password').value;
-        let name='FFF';
-        let telephone = '6574937463';
-        let birthday = '12.01.04';
-        fetch('http://localhost:3000/users', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ name, telephone, email, birthday, password }),
-        })
-            .then(response => {
-                return response.text();
-            })
-            .then(data => {
-                console.log(data);
-                getUser();
-            });
+
+        if(ValidateLogin(email, password)) {
+            window.location.href = `/profile?id=${email.split('@')[0]}`;
+        } else {
+            window.location.href = '/login/error';
+        }
     }
 
     return (
@@ -53,13 +52,13 @@ function Login() {
                     <h1 className='login-header__h1'>ВХОД</h1>
                 </header>
                 <div className='login-content'>
-                    <Field text='Почта' id='login-field-email'/>
-                    <Field text='Пароль' id='login-field-password'/>
+                    <Field text='Почта' idInput='login-field-email' idText='login-p-email'/>
+                    <Field text='Пароль' idInput='login-field-password' idText='login-p-password'/>
                     <Link to='/authorization' className='login-content__registration'>
                         Регистрация
                     </Link>
                 </div>
-                <button className='login-button' onClick={createUser}>
+                <button className='login-button' onClick={LoginUser}>
                     {/* <Link to='/login/error' className="login-button__link">
                     ВОЙТИ
                 </Link> */}
