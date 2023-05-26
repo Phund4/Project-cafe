@@ -1,0 +1,31 @@
+.mainpage-sidebar
+    position: absolute
+    top: 51px
+    left: 112px
+    z-index: 100
+    width: min-content
+    @include respond(big-screen)
+        top: 30px
+        left: 30px
+    @include respond(tab-land)
+        top: 20px
+        left: 20px
+    @include respond(tab-port)
+        left: calc(50% - 3.5rem)
+        top: 90vh
+    @include respond(phone)
+        left: calc(50% - 3.5rem)
+        top: 110vh
+
+    &__hamburger
+        display: block
+        border: none
+        z-index: 100
+        width: 7.1rem
+        height: 7.1rem
+        background: transparent
+        background-image: url(../../img/hamburger-black.svg)
+        @include respond(tab-port)
+            height: 80px
+        @include respond(phone)
+            height: 70px

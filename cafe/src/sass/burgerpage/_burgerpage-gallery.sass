@@ -1,0 +1,59 @@
+.main-burgerpage-gallery
+    display: grid
+    width: 100%
+    grid-column: full-start / full-end
+    grid-template-columns: repeat(3, 1fr)
+    grid-tomplate-rows: repeat(3, 1fr)
+    grid-gap: 9rem 
+    padding: 6rem
+    &__item
+        align-self: center
+        justify-self: center
+    &__h2
+        margin-left: 25%
+        background-color: $color-white
+        width: 50%
+        border: 1px solid $color-white
+        padding: 3px
+        border-radius: 90px
+        text-align: center
+        @include respond(big-screen)
+            font-size: 48px
+            margin-top: 6px
+            margin-bottom: 30px
+        @include respond(tab-land)
+            font-size: 42px
+            padding: 3px
+            margin-top: 8px
+            margin-bottom: 10px
+        @include respond(tab-port)
+            background-color: rgba(255, 138, 0, 0.19)
+            font-size: 32px
+            padding: 6px 
+        @include respond(phone)
+            background-color: rgba(255, 138, 0, 0.19)
+    &__img
+        height: 340px 
+        @include respond(big-screen)
+            height: 280px 
+        @include respond(tab-land)
+            height: 210px
+        @include respond(tab-port)
+            height: 215px
+
+    @include respond(big-screen)
+        grid-gap: 2px 
+        padding: 2px       
+    @include respond(tab-land)
+        grid-gap: 8px
+        padding: 2px
+    @include respond(tab-port)
+        grid-template-columns: repeat(1, 1fr)
+        grid-tomplate-rows: repeat(1, 1fr)
+        grid-gap: 20px
+        padding: 10px
+    @include respond(phone)
+        grid-template-columns: repeat(1, 1fr)
+        grid-tomplate-rows: repeat(1, 1fr)
+        grid-gap: 20px
+        padding: 10px

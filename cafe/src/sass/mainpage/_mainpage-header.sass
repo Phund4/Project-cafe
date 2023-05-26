@@ -1,0 +1,59 @@
+.mainpage-header
+    display: flex
+    align-items: center
+    flex-direction: column
+    position: relative
+    margin-top: 27px
+    &__h1
+        display: inline
+        height: min-content
+        width: min-content
+        font-size: 9.5rem
+        font-weight: 800
+        line-height: 12.1rem
+        letter-spacing: 0.1em
+        color: $color-black
+        text-shadow: 0px 4px 33px #000000
+        -webkit-text-stroke: 4px $color-white
+        margin-top: 60px
+        @include respond(tab-land)
+            font-size: 6rem
+            margin-top: 1rem
+        @include respond(tab-port)
+            display: none
+        @include respond(phone)
+            display: none
+        
+    &__h1-blur
+        height: min-content
+        width: min-content
+        position: absolute
+        z-index: -1
+        font-size: 11.5rem
+        font-weight: 800
+        line-height: 14.5rem
+        letter-spacing: .05em
+        color: $color-black
+        -webkit-text-stroke: 6px $color-white
+        filter: blur(10.5px)
+        @include respond(tab-land)
+            font-size: 7.5rem
+            filter: blur(5.5px)
+            margin-top: -3rem
+        @include respond(tab-port)
+            display: none
+        @include respond(phone)
+            display: none
+        
+    &__img
+        display: inline
+        width: 39rem
+        height: 31.7rem
+        @include respond(tab-port)
+            margin-top: 5rem
+            opacity: 0.2
+            height: 170px
+        @include respond(phone)
+            margin-top: 5rem
+            opacity: 0.2
+            height: 170px

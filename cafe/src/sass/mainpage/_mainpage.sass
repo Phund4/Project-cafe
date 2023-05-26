@@ -1,6 +1,10 @@
-.main
-    min-width: 100%
-    min-height: 100%
+@import 'mainpage-header.sass'
+@import 'mainpage-content.sass'
+@import 'mainpage-sidebar.sass'
+
+.mainpage-main
+    min-width: 100vw
+    min-height: 100vh
     background-image: $background-gradient
     background-size: 100% 100%
     background-repeat: no-repeat
@@ -8,6 +12,7 @@
     align-items: center
     flex-direction: column
     z-index: -100
+<<<<<<< HEAD
 
 .header-mainpage
     display: flex
@@ -40,3 +45,9 @@
         display: inline
         width: 39rem
         height: 31.7rem
+=======
+    @include respond(phone)
+        background: $color-white
+    @include respond(tab-port)
+        background: $color-white
+>>>>>>> experiment
