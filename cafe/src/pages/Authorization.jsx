@@ -8,7 +8,6 @@ import { HashLink as Link } from "react-router-hash-link";
 import CryptoJS from 'crypto-js';
 
 function Authorization() {
-
     const [users, setUsers] = useState(false);
     useEffect(() => {
         getUser();

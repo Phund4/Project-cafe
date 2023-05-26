@@ -24,7 +24,6 @@ function Login() {
 
     const ValidateLogin = (email, password) => {
         let list = JSON.parse(users);
-        console.log(list);
         for(let i=0; i<list.length; i++) {
             if(list[i].mail == email && 
                 list[i].password == password) {
@@ -39,7 +38,7 @@ function Login() {
         let password = document.getElementById('login-field-password').value;
 
         if(ValidateLogin(email, password)) {
-            window.location.href = '/profile';
+            window.location.href = `/profile?id=${email.split('@')[0]}`;
         } else {
             window.location.href = '/login/error';
         }
