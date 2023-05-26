@@ -29,8 +29,8 @@
             &__icon-hover
                 opacity: 0
                 filter: alpha(opacity=0)
-                left: 2rem 
-                top: 2rem
+                left: 0rem 
+                top: 4rem 
             &:hover
                 .main-burgerpage-icon-container__icon
                     opacity: 0
@@ -48,13 +48,14 @@
                         left: 15px
                     @include respond(phone)
                         top: 55px
-                        left: 5px
+                        left: 12px
         .pizza-container
             width: 19.5rem
             height: 23.5rem
             margin-right: 2.4rem
             @include respond(tab-land)
                 width: 20rem
+                margin-left: -3rem
             @include respond(tab-port)
                 width: 15rem
                 margin-right: 1.4rem
@@ -62,39 +63,37 @@
             @include respond(phone)
                 width: 12rem
                 margin-right: 1.4rem
-                padding-left: 6rem
+                padding-left: 1rem
+                margin-left: 0.3rem
         .burger-container
             width: 20rem
             height: 20rem
             @include respond(tab-land)
-                width: 15rem    
-                margin-right: 2rem  
-                margin-left: 2rem      
+                width: 15rem            
             @include respond(tab-port)
                 width: 10rem
             @include respond(phone)
                 width: 12rem
                 padding-right: 2rem
                 padding-left: 1rem
-
         .beer-container
             width: 24rem
             height: 23.7rem
             @include respond(tab-land)
                 width: 20rem
-                padding-right: 2rem
+                padding-left: 2rem
             @include respond(tab-port)
                 width: 15rem
                 padding-left: 1rem
             @include respond(phone)
                 width: 12rem
-                padding-right: 6rem
+                padding-right: 3rem
 
 .main-burgerpage__text-pizza
     display: block
     text-align: center
     margin-top: 2rem
-    margin-bottom: 1rem
+    margin-bottom: -1rem
     font-size: 10rem
     font-weight: 800
     line-height: 121px
@@ -102,9 +101,6 @@
     color: $color-black
     text-shadow: 0px 4px 33px #000000
     -webkit-text-stroke: 4px $color-white
-    @include respond(tab-land)
-        margin-bottom: 3rem
-        margin-top: -2rem
     @include respond(tab-port)
         top: -5px
         display: block
@@ -122,7 +118,8 @@
         font-weight: 700
         line-height: 77px
         margin-top: -4rem
-        font-size: 48px
+        font-size: 60px
+        margin-bottom: 1rem
         text-shadow: 0px 4px 4px #FF9900
         -webkit-text-stroke: 0px
 
