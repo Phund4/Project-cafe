@@ -61,10 +61,7 @@ const createUser = (body) => {
         pool.query(myQuery, (error, results) => {
             if (error) {
                 reject(error)
-                console.log(myQuery);
-                console.log('Error in model create');
             } else {
-                console.log('Access query create');
                 resolve({tokens, body})
             }
         })
