@@ -1,0 +1,159 @@
+.main-pizzapage-content
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    margin-top: -57.5rem
+    @include respond(phone)
+        margin-top: -60rem
+    &__icons
+        display: flex
+        flex-direction: row
+        align-items: center
+        .main-pizzapage-icon-container
+            display: flex
+            justify-content: center
+            align-items: center
+            position: relative
+            margin-top: -2rem
+            img
+                position: absolute
+                @include respond(big-screen)
+                    height: 80%
+                @include respond(tab-land)
+                    height: 67%
+                @include respond(tab-port)
+                    height: 50.5%
+                @include respond(phone)
+                    height: 48%
+            &__icon-hover
+                opacity: 0
+                filter: alpha(opacity=0)
+                left: 0rem 
+                top: 4rem 
+            &:hover
+                .main-pizzapage-icon-container__icon
+                    opacity: 0
+                    filter: alpha(opacity=0)
+                .main-pizzapage-icon-container__icon-hover
+                    top: -1px
+                    left: -1px
+                    opacity: 1
+                    filter: alpha(opacity=100)
+                    @include respond(tab-land)
+                        top: 38px
+                        left: 38px
+                    @include respond(tab-port)
+                        top: 60px
+                        left: 15px
+                    @include respond(phone)
+                        top: 55px
+                        left: 12px
+        .pizza-container
+            width: 19.5rem
+            height: 23.5rem
+            margin-right: 2.4rem
+            @include respond(tab-land)
+                width: 20rem
+                margin-left: -3rem
+            @include respond(tab-port)
+                width: 15rem
+                margin-right: 1.4rem
+                padding-left: 1rem
+            @include respond(phone)
+                width: 12rem
+                margin-right: 1.4rem
+                padding-left: 1rem
+                margin-left: 0.3rem
+        .burger-container
+            width: 20rem
+            height: 20rem
+            @include respond(tab-land)
+                width: 15rem            
+            @include respond(tab-port)
+                width: 10rem
+            @include respond(phone)
+                width: 12rem
+                padding-right: 2rem
+                padding-left: 1rem
+        .beer-container
+            width: 24rem
+            height: 23.7rem
+            @include respond(tab-land)
+                width: 20rem
+                padding-left: 2rem
+            @include respond(tab-port)
+                width: 15rem
+                padding-left: 1rem
+            @include respond(phone)
+                width: 12rem
+                padding-right: 3rem
+
+.main-pizzapage__text-pizza
+    display: block
+    text-align: center
+    margin-top: 2rem
+    margin-bottom: -1rem
+    font-size: 10rem
+    font-weight: 800
+    line-height: 121px
+    letter-spacing: 0.1em
+    color: $color-black
+    text-shadow: 0px 4px 33px #000000
+    -webkit-text-stroke: 4px $color-white
+    @include respond(tab-port)
+        top: -5px
+        display: block
+        text-align: center
+        font-weight: 700
+        line-height: 77px
+        margin-top: -4rem
+        font-size: 64px
+        text-shadow: 0px 4px 4px #FF9900
+        -webkit-text-stroke: 0px
+    @include respond(phone)
+        top: -5px
+        display: block
+        text-align: center
+        font-weight: 700
+        line-height: 77px
+        margin-top: -4rem
+        font-size: 64px
+        text-shadow: 0px 4px 4px #FF9900
+        -webkit-text-stroke: 0px
+
+.main-pizzapage__text-tel
+    display: none
+    @include respond(tab-port)
+        margin-top: 3rem
+        margin-bottom: 3rem
+        display: block
+        font-weight: 700
+        font-size: 48px
+        line-height: 39px
+        text-align: center
+        color: $color-black
+        text-shadow: 0px 4px 4px rgba(121, 115, 106, 0.58)
+    @include respond(phone)
+        margin-top: 3rem
+        margin-bottom: 3rem
+        display: block
+        font-weight: 700
+        font-size: 32px
+        line-height: 39px
+        text-align: center
+        color: $color-black
+        text-shadow: 0px 4px 4px rgba(121, 115, 106, 0.58)
+
+.main-pizzapage__footer
+    display: none
+    @include respond(tab-port)
+        display: block
+        background: rgba(255, 153, 0, 0.44)
+        width: 100vw
+        height: 120px
+    @include respond(phone)
+        display: block
+        background: rgba(255, 153, 0, 0.44)
+        width: 100vw
+        height: 100px

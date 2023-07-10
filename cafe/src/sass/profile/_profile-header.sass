@@ -1,0 +1,74 @@
+.profile-header
+    display: flex
+    align-items: center
+    flex-direction: column
+    position: relative
+    margin-top: 2rem
+    &__img-beer
+        display: none
+        @include respond(tab-port)
+            display: block
+        @include respond(phone)
+            display: block
+    &__h1-blur
+        font-size: 12rem
+        font-weight: 800
+        line-height: 145px
+        letter-spacing: .05em
+        color: $color-black
+        filter: blur(6px)
+        -webkit-text-stroke: 8px $color-white
+        margin-bottom: 8.2rem
+        @include respond(big-screen)
+            font-size: 9rem
+            filter: blur(4px)
+        @include respond(tab-land)
+            font-size: 7rem
+            filter: blur(3px)
+            margin-top: -2rem
+            margin-bottom: 3rem
+        @include respond(tab-port)
+            display: none
+        @include respond(phone)
+            display: none
+    &__h2
+        width: min-content
+        display: flex
+        flex-direction: row
+        justify-content: flex-start
+        align-items: flex-end
+        margin-top: -5rem
+    &__p
+        font-weight: 800
+        font-size: 8rem
+        line-height: 85px
+        letter-spacing: -.03em
+        color: $color-black
+        -webkit-text-stroke: 4px $color-white
+        text-shadow: 0px 4px 20px #F8F8F8
+        @include respond(tab-land)
+            font-weight: 700
+            color: $color-black
+            -webkit-text-stroke: 0px $color-black
+            margin-bottom: 2rem
+            font-size: 7rem
+            line-height: 42px
+        @include respond(tab-port)
+            font-weight: 700
+            color: $color-black
+            -webkit-text-stroke: 0px $color-black
+            margin-top: 5rem
+            margin-bottom: 2rem
+            font-size: 4rem
+            line-height: 42px
+        @include respond(phone)
+            margin-top: 5rem
+            font-size: 4rem
+            line-height: 42px
+            margin-bottom: 2rem
+    &__img-human
+        @include respond(tab-port)
+            display: none
+        @include respond(phone)
+            display: none
+

@@ -1,0 +1,22 @@
+@import 'beerpage-header'
+@import 'beerpage-content'
+
+html
+    font-size: 62.5%
+    @include respond(big-screen)
+        font-size: 55%
+    @include respond(tab-land)
+        font-size: 50.5%
+    @include respond(tab-port)
+        font-style: 45%
+    @include respond(phone)
+        font-size: 40%
+
+.main-beerpage
+    min-width: 100vw
+    min-height: 200vh
+    background: $background-gradient
+    @include respond(tab-port)
+        background: $color-white
+    @include respond(phone)
+        background: $color-white
