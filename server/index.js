@@ -35,10 +35,7 @@ app.post('/users', (req, res) => {
 })
 
 app.post('/login', (req, res, next) => {
-    user_model.LoginUser(req.body)
-        .then(response => {
-            
-        })
+
 })
 
 app.post('/logout', (req, res, next) => {
@@ -51,4 +48,16 @@ app.get('/refresh', (req, res, next) => {
 
 app.listen(port, () => {
     console.log(`App running on port ${port}.`)
+})
+
+app.get('/pizza', (req, res) => {
+    user_model.getPizza()
+        .then(response => {
+            res.status(200).send(response);
+            console.log('Access in pizza');
+        })
+        .catch(error => {
+            res.status(500).send(error);
+            console.log('Error in pizza');
+        })
 })

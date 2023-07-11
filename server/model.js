@@ -26,7 +26,7 @@ const getUsers = () => {
     })
 }
 
-const LoginUser = (body) => {
+const loginUser = (body) => {
     return new Promise(function(resolve, reject) {
         const tokenInfo = {
             name: body.name,
@@ -68,9 +68,21 @@ const createUser = (body) => {
     })
 }
 
+const getPizza = () => {
+    return new Promise(function (resolve, reject) {
+        pool.query("SELECT p.name, p.price FROM products p, food f WHERE f.id = p.foodtype and f.type = 'pizza'", (error, results) => {
+            if (error) {
+                reject(error)
+                console.log('Error in pizza get')
+            }
+            resolve(results.rows);
+        })
+    })
+}
 
 module.exports = {
     getUsers,
     createUser,
-    LoginUser
+    loginUser,
+    getPizza
 }
