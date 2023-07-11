@@ -34,17 +34,6 @@ app.post('/users', (req, res) => {
         })
 })
 
-app.post('/login', (req, res, next) => {
-})
-
-app.post('/logout', (req, res, next) => {
-
-})
-
-app.get('/refresh', (req, res, next) => {
-
-})
-
 app.listen(port, () => {
     console.log(`App running on port ${port}.`)
 })

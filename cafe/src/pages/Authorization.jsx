@@ -142,7 +142,6 @@ function Authorization() {
         let email = document.getElementById('authorization-field-email').value;
         let birthday = document.getElementById('authorization-field-birthday').value;
         let password = document.getElementById('authorization-field-password').value;
-        // let password = CryptoJS.AES.encrypt(passwordUTF8, '').toString();
         fetch('http://localhost:3000/users', {
             method: 'POST',
             headers: {
@@ -204,14 +203,6 @@ function Authorization() {
                     <p className="authorization-button__link">
                         Зарегистрироваться
                     </p>
-                    {/* <EmptyInput
-                        link="/#/"
-                        text="ВХОД"
-                        className="authorization-button__link-v1"
-                    /> */}
-                    {/* <Link to="/password/" className="authorization-button__link">
-            ВОЙТИ
-          </Link> */}
                 </button>
             </div>
         </>
