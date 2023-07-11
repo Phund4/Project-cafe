@@ -49,3 +49,27 @@ app.get('/pizza', (req, res) => {
             console.log('Error in pizza');
         })
 })
+
+app.get('/burger', (req, res) => {
+    user_model.getBurger()
+        .then(response => {
+            res.status(200).send(response);
+            console.log('Access in burger');
+        })
+        .catch(error => {
+            res.status(500).send(error);
+            console.log('Error in burger');
+        })
+})
+
+app.get('/beer', (req, res) => {
+    user_model.getBeer()
+        .then(response => {
+            res.status(200).send(response);
+            console.log('Access in beer');
+        })
+        .catch(error => {
+            res.status(500).send(error);
+            console.log('Error in beer');
+        })
+})

@@ -6,12 +6,11 @@ import Burger from "../img/burger.svg";
 import BurgerHover from "../img/burger-hover.svg";
 import Beer from "../img/beer.svg";
 import BeerHover from "../img/beer-hover.svg";
-import PizzaBlock from '../components/Pizza/Pizza';
+import Food from '../components/Food/Food';
 import {useState, useEffect} from 'react';
 import { HashLink as Link } from "react-router-hash-link";
 import SidebarBurger from "../components/SidebarBurger/SidebarBurger";
 function PizzaPage() {
-    // eslint-disable-next-line no-unused-vars
     const [pizza, setPizza] = useState('[]');
     useEffect(() => {
         getPizza();
@@ -83,7 +82,7 @@ function PizzaPage() {
                 <h3 className="main-pizzapage__text-pizza">ПИЦЦА</h3>
                 <ul className="main-pizzapage-gallery">
                     {JSON.parse(pizza).map((el, index) =>
-                        <PizzaBlock text={el.name} price={el.price} key={index}/>)}
+                        <Food text={el.name} price={el.price} key={index}/>)}
                 </ul>
                 <h4 className="main-pizzapage__text-tel">8-958-525-23-45</h4>
                 <div className="main-pizzapage__footer"></div>

@@ -80,9 +80,35 @@ const getPizza = () => {
     })
 }
 
+const getBurger = () => {
+    return new Promise(function (resolve, reject) {
+        pool.query("SELECT p.name, p.price FROM products p, food f WHERE f.id = p.foodtype and f.type = 'burger'", (error, results) => {
+            if (error) {
+                reject(error)
+                console.log('Error in burger get')
+            }
+            resolve(results.rows);
+        })
+    })
+}
+
+const getBeer = () => {
+    return new Promise(function (resolve, reject) {
+        pool.query("SELECT p.name, p.price FROM products p, food f WHERE f.id = p.foodtype and f.type = 'beer'", (error, results) => {
+            if (error) {
+                reject(error)
+                console.log('Error in beer get')
+            }
+            resolve(results.rows);
+        })
+    })
+}
+
 module.exports = {
     getUsers,
     createUser,
     loginUser,
-    getPizza
+    getPizza,
+    getBurger,
+    getBeer
 }
