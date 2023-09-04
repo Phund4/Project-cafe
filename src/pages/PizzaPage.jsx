@@ -17,7 +17,7 @@ function PizzaPage() {
     }, []);
 
     function getPizza() {
-        fetch('http://localhost:3000/pizza')
+        fetch('http://127.0.0.1:3000/pizza/getpizzas')
             .then(response => {
                 return response.text();
             })

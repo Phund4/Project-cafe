@@ -18,7 +18,7 @@ function BeerPage() {
     }, []);
 
     function getBeer() {
-        fetch('http://localhost:3000/beer')
+        fetch('http://127.0.0.1:3000/beer/getbeers')
             .then(response => {
                 return response.text();
             })
