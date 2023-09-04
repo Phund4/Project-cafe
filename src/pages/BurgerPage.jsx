@@ -11,21 +11,27 @@ import { HashLink as Link } from "react-router-hash-link";
 import Food from '../components/Food/Food';
 import SidebarBurger from "../components/SidebarBurger/SidebarBurger";
 
-function BurgerPage() {
-    // const [burger, setBurger] = useState('[]');
-    // useEffect(() => {
-    //     getBurger();
-    // }, []);
+function inc(x) {
+    return x++;
+}
 
-    // function getBurger() {
-    //     fetch('http://127.0.0.1:3000/burger/getburgers')
-    //         .then(response => {
-    //             return response.text();
-    //         })
-    //         .then(data => {
-    //             setBurger(data);
-    //         });
-    // }
+function BurgerPage() {
+    const [burger, setBurger] = useState('[]');
+    useEffect(() => {
+        getBurger();
+    }, []);
+
+    console.log(inc(1));
+
+    function getBurger() {
+        fetch('http://127.0.0.1:3000/burger/getburgers')
+            .then(response => {
+                return response.text();
+            })
+            .then(data => {
+                setBurger(data);
+            });
+    }
     return (
         <>
             <div className="main-burgerpage">
