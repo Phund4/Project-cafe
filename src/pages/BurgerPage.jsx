@@ -11,8 +11,8 @@ import { HashLink as Link } from "react-router-hash-link";
 import Food from '../components/Food/Food';
 import SidebarBurger from "../components/SidebarBurger/SidebarBurger";
 
-function inc(a) {
-    console.log(a++);
+function inc(x) {
+    return x++;
 }
 
 function BurgerPage() {
@@ -21,7 +21,7 @@ function BurgerPage() {
         getBurger();
     }, []);
 
-    inc(2);
+    console.log(inc(1));
 
     function getBurger() {
         fetch('http://127.0.0.1:3000/burger/getburgers')
