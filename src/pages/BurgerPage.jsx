@@ -12,20 +12,20 @@ import Food from '../components/Food/Food';
 import SidebarBurger from "../components/SidebarBurger/SidebarBurger";
 
 function BurgerPage() {
-    const [burger, setBurger] = useState('[]');
-    useEffect(() => {
-        getBurger();
-    }, []);
+    // const [burger, setBurger] = useState('[]');
+    // useEffect(() => {
+    //     getBurger();
+    // }, []);
 
-    function getBurger() {
-        fetch('http://127.0.0.1:3000/burger/getburgers')
-            .then(response => {
-                return response.text();
-            })
-            .then(data => {
-                setBurger(data);
-            });
-    }
+    // function getBurger() {
+    //     fetch('http://127.0.0.1:3000/burger/getburgers')
+    //         .then(response => {
+    //             return response.text();
+    //         })
+    //         .then(data => {
+    //             setBurger(data);
+    //         });
+    // }
     return (
         <>
             <div className="main-burgerpage">
