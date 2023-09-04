@@ -1,0 +1,234 @@
+.mainpage-content
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    &__h2
+        font-size: 10rem
+        font-weight: 800
+        line-height: 121px
+        letter-spacing: -.7rem
+        color: $color-black
+        -webkit-text-stroke: 5px $color-white
+        text-shadow: 0px 4px 20px #F8F8F8
+        &_menu
+            margin-top: -2.1rem
+            @include respond(tab-land)
+                margin-top: 1rem
+                font-size: 11rem
+            @include respond(tab-port)
+                margin-top: -17rem
+                text-transform: lowercase
+                font-size: 8rem
+                -webkit-text-stroke: 0px
+                letter-spacing: 0rem
+                text-shadow: 0px 4px 4px #FF9900
+            @include respond(phone)
+                margin-top: -17rem
+                text-transform: lowercase
+                font-size: 8rem
+                -webkit-text-stroke: 0px
+                letter-spacing: 0rem
+                text-shadow: 0px 4px 4px #FF9900
+        &_stocks
+            margin-bottom: 7rem
+            @include respond(tab-land)
+                font-size: 8.5rem
+            @include respond(tab-port)
+                display: none
+            @include respond(phone)
+                display: none
+        &_about
+            margin-top: 3.6rem
+            margin-bottom: 1.4rem
+            @include respond(tab-land)
+                font-size: 8.5rem
+            @include respond(tab-port)
+                display: none
+            @include respond(phone)
+                display: none
+        &_contacts
+            margin-top: 5rem
+            margin-bottom: 4.4rem
+            @include respond(tab-land)
+                font-size: 8.5rem
+            @include respond(tab-port)
+                display: none
+            @include respond(phone)
+                display: none
+    &__icons
+        display: flex
+        flex-direction: row
+        align-items: center
+        @include respond(tab-port)
+            margin-top: 3rem
+            flex-direction: column
+        @include respond(phone)
+            margin-top: 3rem
+            flex-direction: column
+        .mainpage-icon-container
+            display: flex
+            justify-content: center
+            align-items: center
+            position: relative
+            img
+                position: absolute
+                @include respond(tab-land)
+                    height: 80%
+            &__icon-hover
+                opacity: 0
+                filter: alpha(opacity=0)
+            &:hover
+                .mainpage-icon-container__icon
+                    opacity: 0
+                    filter: alpha(opacity=0)
+                .mainpage-icon-container__icon-hover
+                    top: -1px
+                    left: -1px
+                    opacity: 1
+                    filter: alpha(opacity=100)
+                    @include respond(tab-port)
+                        top: 25px
+                        left: 3px
+                    @include respond(phone)
+                        top: 25px
+                        left: 3px
+        .pizza-container
+            width: 19.5rem
+            height: 23.5rem
+            margin-right: 2.4rem
+        .burger-container
+            width: 20rem
+            height: 20rem
+        .beer-container
+            width: 24rem
+            height: 23.7rem
+
+    &__stocks
+        display: flex
+        flex-direction: row
+        align-items: center
+        padding-left: 8rem
+        @include respond(tab-land)
+            padding-left: 0rem
+        @include respond(tab-port)
+            display: none
+        @include respond(phone)
+            display: none
+        
+        .mainpage-stocks-div
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            &_right
+                border-right: 5px solid $color-white
+                padding-right: 4rem
+                margin-right: 3.2rem
+            &__h1
+                display: inline-block
+                font-size: 7rem
+                line-height: 85px
+                text-align: center
+                color: $color-black
+                text-shadow: 0px 4px 10px $color-white
+                @include respond(tab-land)
+                    font-size: 6rem
+                    line-height: 60px
+                    margin-left: 0rem
+            &__h2
+                font-size: 4rem
+                line-height: 48px
+                text-align: center
+                color: #323232
+                opacity: 0.8
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+                @include respond(tab-land)
+                    font-size: 2.5rem
+            &__img
+                width: 25.8rem
+                height: 26.4rem
+
+    &__about
+        display: flex
+        flex-direction: column
+        align-items: center
+        @include respond(tab-port)
+            display: none
+        @include respond(phone)
+            display: none
+        p
+            font-size: 70px
+            line-height: 85px
+            text-align: center
+            color: $color-black
+            text-shadow: 0px 4px 10px $color-white
+            @include respond(tab-land)
+            font-size: 5.5rem
+            line-height: 65px
+            margin-top: 2rem
+        .mainpage-about
+            &__img
+                width: 35.8rem
+                height: 36.6rem
+            &__bestcafe
+                opacity: 0.8
+
+    &__contacts
+        @include respond(tab-port)
+            display: none
+        @include respond(phone)
+            display: none
+        .mainpage-contacts
+            &__phone-number
+                font-size: 90px
+                line-height: 109px
+                text-align: center
+                color: $color-white
+                text-shadow: 0px 4px 16px rgba(0, 0, 0, 0.58)
+                @include respond(tab-land)
+                    font-size: 8rem
+                    margin-top: -2rem
+            &__arrow
+                position: relative
+                width: 11.6rem
+                height: 10rem
+                margin: 20px auto
+                @include respond(tab-land)
+                    height: 8rem
+                div
+                    position: relative
+                    top: 20px
+                    width: 11.6rem
+                    height: .7rem
+                    background-color: $color-white
+                    box-shadow: 0 3px 5px rgb(0 0 0 / 20%)
+                    left: 0
+                    display: block
+                    transform: rotate(90deg)
+                    margin-top: 6.5rem
+                    &::after, &::before
+                        content: ''
+                        position: absolute
+                        width: 3.8rem
+                        height: .7rem
+                        background-color: $color-white
+
+                    &::before
+                        top: 11px
+                        right: -8px
+                        box-shadow: 0 3px 5px rgb(0 0 0 / 20%)
+                        transform: rotate(-45deg)
+                    &::after
+                        top: -11px
+                        right: -8px
+                        transform: rotate(45deg)
+
+            &__info
+                font-size: 80px
+                line-height: 97px
+                text-align: center
+                color: #FFFFFF
+                text-shadow: 0px 4px 16px rgba(0, 0, 0, 0.58)
+                @include respond(tab-land)
+                    font-size: 5.5rem
