@@ -15,7 +15,7 @@ function Code() {
           <Field type="text" id="code-field-name" />
         </div>
         <button className="code-button">
-          <Link to="/profile/" className="code-button__link">
+          <Link to="/password/" className="code-button__link">
             ПРОДОЛЖИТЬ
           </Link>
         </button>
