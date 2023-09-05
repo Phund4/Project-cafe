@@ -85,7 +85,7 @@ function BeerPage() {
                 <h3 className="main-beerpage__text-beer">НАПИТКИ</h3>
                 <div className="main-beerpage-gallery">
                     {beer.map((el, index) =>
-                        <Food text={el[0]} price={el[1]} key={index} />)}
+                        <Food text={'AAaaaa'} price={1234} key={index} />)}
                 </div>
                 <h4 className="main-beerpage__text-tel">8-958-525-23-45</h4>
                 <div className="main-beerpage__footer"></div>
