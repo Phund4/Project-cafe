@@ -1,7 +1,16 @@
 import uuid
 from typing import Optional
-
+from pydantic import BaseModel, ConfigDict
 from fastapi_users import schemas
+
+
+class ProductsRead(BaseModel):
+    from_attributes=True
+
+    id : int
+    name : str
+    price : int
+    food_type : int
 
 
 class UserRead(schemas.BaseUser[int]):
@@ -9,6 +18,8 @@ class UserRead(schemas.BaseUser[int]):
     email: str
     username: str
     role_id: int
+    phone_number: str
+    birthdate : str
     is_active: bool = True
     is_superuser: bool = False
     is_verified: bool = False
@@ -21,6 +32,8 @@ class UserCreate(schemas.BaseUserCreate):
     username: str
     email: str
     password: str
+    phone_number: str
+    birthdate : str
     role_id: int
     is_active: Optional[bool] = True
     is_superuser: Optional[bool] = False
@@ -29,5 +42,7 @@ class UserCreate(schemas.BaseUserCreate):
 class UserUpdate(schemas.BaseUserUpdate):
     username: str
     email: str
+    phone_number: str
+    birthdate : str
     
     

@@ -8,36 +8,31 @@ import { useState, useEffect } from 'react';
 import { HashLink as Link } from "react-router-hash-link";
 
 function Profile() {
-    const [users, setUsers] = useState(false);
+
+    let [userdata, setUserdata] = useState();
+    let [status, setStatus] = useState();
 
     useEffect(() => {
-        getUser();
+        thisUser();
     }, []);
-
-    function getUser() {
-        fetch('http://localhost:3000')
-            .then(response => {
-                return response.text();
-            })
-            .then(data => {
-                setUsers(data);
-            });
-    }
-
+    
     function thisUser() {
-        let list = JSON.parse(users);
-        let res = {};
-        let id = document.location.href.split('?')[1].split('=')[1];
-        for (let i=0; i<list.length; i++) {
-            if(list[i].mail.split('@')[0] == id) {
-                res.name = list[i].name;
-                res.telephone = list[i].telephone;
-                res.email = list[i].mail;
-                res.birthday = list[i].birthday.slice(0, 10);
-                res.password = list[i].password;
-            }
-        }
-        return res;
+        fetch("http://127.0.0.1:8000/users/me", {
+            headers: {
+                'Content-type': 'application/json',
+              },
+            method: 'GET',
+            credentials: 'include',
+        })
+            .then(data => data.json())
+
+            .then(data => {
+                setUserdata(data);
+                console.log(data)
+                if (data.detail == 'Unauthorized'){
+                    window.location.href = '/login';
+                }
+            })
     }
 
     return (
@@ -61,7 +56,7 @@ function Profile() {
                             type="text"
                             id="profile-field-name"
                             placeholder="ИМЯ"
-                            value={thisUser().name}
+                            value={userdata?.username}
                             className="profile-content__field__input field-yellow"
                             readOnly={true}
                         />
@@ -72,7 +67,7 @@ function Profile() {
                             type="tel"
                             id="profile-field-phone"
                             placeholder="+7"
-                            value={thisUser().telephone}
+                            value={userdata?.phone_number}
                             className="profile-content__field__input field-yellow"
                             readOnly={true}
                         />
@@ -82,7 +77,7 @@ function Profile() {
                         <input
                             type="email"
                             id="profile-field-email"
-                            value={thisUser().email}
+                            value={userdata?.email}
                             className="profile-content__field__input field-yellow"
                             readOnly={true}
                         />
@@ -92,17 +87,7 @@ function Profile() {
                         <input
                             type="text"
                             id="profile-field-birthday"
-                            value={thisUser().birthday}
-                            className="profile-content__field__input field-yellow"
-                            readOnly={true}
-                        />
-                    </div>
-                    <div className="profile-content__field">
-                        <p className="profile-content__field__p">Пароль</p>
-                        <input
-                            type="text"
-                            id="profile-field-password"
-                            value={thisUser().password}
+                            value={userdata?.birthdate} 
                             className="profile-content__field__input field-yellow"
                             readOnly={true}
                         />
@@ -115,5 +100,6 @@ function Profile() {
         </>
     );
 }
+
 
 export default Profile;

@@ -8,21 +8,6 @@ import { HashLink as Link } from "react-router-hash-link";
 import CryptoJS from 'crypto-js';
 
 function Authorization() {
-    const [users, setUsers] = useState(false);
-    useEffect(() => {
-        getUser();
-    }, []);
-
-    function getUser() {
-        fetch('http://localhost:3000')
-            .then(response => {
-                return response.text();
-            })
-            .then(data => {
-                setUsers(data);
-            });
-    }
-
     const UnvalidateInput = (input, p, text) => {
         input.classList.remove('field-yellow');
         input.classList.add('field-red');
@@ -47,16 +32,9 @@ function Authorization() {
     }
 
     const ValidateEmail = (email) => {
-        let emails = [];
-        let list = JSON.parse(users);
-        for(let i=0; i<list.length; i++) {
-            emails.push(list[i].mail);
-        }
         // eslint-disable-next-line no-useless-escape
-        if(email.match(/^[\w]{1}[\w-\.]*@[\w-]+\.[a-z]{2,4}$/i)
-            && !emails.includes(email)) {
+        if(email.match(/^[\w]{1}[\w-\.]*@[\w-]+\.[a-z]{2,4}$/i))
             return true;
-        }
         return false;
     };
 
@@ -133,31 +111,48 @@ function Authorization() {
         }
     }
 
-    function createUser() {
+    function createUser(event) {
         if(!CheckName() || !CheckTelephone() || !CheckEmail() || !CheckBirthday() || !CheckPassword()) {
             return;
         }
-        let name = document.getElementById('authorization-field-name').value;
-        let telephone = document.getElementById('authorization-field-phone').value;
+        let username = document.getElementById('authorization-field-name').value;
+        let phone_number = document.getElementById('authorization-field-phone').value;
         let email = document.getElementById('authorization-field-email').value;
-        let birthday = document.getElementById('authorization-field-birthday').value;
+        let birthdate = document.getElementById('authorization-field-birthday').value;
         let password = document.getElementById('authorization-field-password').value;
-        // let password = CryptoJS.AES.encrypt(passwordUTF8, '').toString();
-        fetch('http://localhost:3000/users', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ name, telephone, email, birthday, password }),
-        })
-            .then(response => {
-                return response.text();
-            })
-            .then(data => {
-                console.log(data);
-                getUser();
-            });
-        window.location.href = '/login';
+
+        let xhr = new XMLHttpRequest();
+        let url = "http://127.0.0.1:8000/auth/jwt/register";
+        
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.onreadystatechange = function () {
+        if (xhr.status === 201) {
+            window.location.href = '/login'
+        } else { 
+            event.preventDefault();
+            event.stopPropagation();
+            console.log('Error');
+        }
+        }
+
+        var data = JSON.stringify({ "username": username, "email": email, "password": password, "phone_number": phone_number, "birthdate": birthdate, "role_id": 0});
+
+        xhr.send(data);
+
+
+        // fetch(url, {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify({ name, telephone, email, birthday, password }),
+        // })
+        //     .then(response => {
+        //         window.location.href = '/login';
+        //         return response.text();
+        //     })
     }
 
     return (
@@ -204,14 +199,6 @@ function Authorization() {
                     <p className="authorization-button__link">
                         Зарегистрироваться
                     </p>
-                    {/* <EmptyInput
-                        link="/#/"
-                        text="ВХОД"
-                        className="authorization-button__link-v1"
-                    /> */}
-                    {/* <Link to="/password/" className="authorization-button__link">
-            ВОЙТИ
-          </Link> */}
                 </button>
             </div>
         </>

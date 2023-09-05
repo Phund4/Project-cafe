@@ -7,41 +7,31 @@ import { useState, useEffect } from 'react';
 import { HashLink as Link } from "react-router-hash-link";
 
 function Login() {
-    const [users, setUsers] = useState(false);
-    useEffect(() => {
-        getUser();
-    }, []);
-
-    function getUser() {
-        fetch('http://localhost:3000')
-            .then(response => {
-                return response.text();
-            })
-            .then(data => {
-                setUsers(data);
-            });
-    }
-
-    const ValidateLogin = (email, password) => {
-        let list = JSON.parse(users);
-        for(let i=0; i<list.length; i++) {
-            if(list[i].mail == email && 
-                list[i].password == password) {
-                return true;
-            }
-        }
-        return false;
-    };
-
     function LoginUser() {
         let email = document.getElementById('login-field-email').value;
         let password = document.getElementById('login-field-password').value;
+        
+        let xhr = new XMLHttpRequest(); 
+        
+        xhr.withCredentials = true
+        let url = "http://127.0.0.1:8000/auth/login";
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        
 
-        if(ValidateLogin(email, password)) {
-            window.location.href = `/profile?id=${email.split('@')[0]}`;
-        } else {
-            window.location.href = '/login/error';
-        }
+        
+        xhr.onreadystatechange = function () {
+            if (xhr.status === 200) {
+                window.location.href = '/profile';
+            } else { 
+                window.location.href = '/login/error';
+                console.log('Error');
+            }
+            }
+        var data = 'username=' + encodeURIComponent(email) + '&password=' + encodeURIComponent(password);
+        xhr.send(data);
+        
+
     }
 
     return (

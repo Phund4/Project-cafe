@@ -13,19 +13,32 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi import APIRouter, Request, Depends
-
-
-
+from fastapi.middleware.cors import CORSMiddleware
+from config import DB_HOST, DB_NAME, DB_PASS, DB_PORT, DB_USER
 
 from server_python.auth import auth_backend
+from models.models import food, admins, products
 from server_python.database import User
 from server_python.manager import get_user_manager
-from server_python.schemas import UserRead, UserCreate, UserUpdate
+from server_python.schemas import UserRead, UserCreate, UserUpdate, ProductsRead
+
+from sqlalchemy import Column, String, Boolean, Integer, TIMESTAMP, ForeignKey, create_engine, select
+from sqlalchemy.ext.asyncio import AsyncSession 
+from sqlalchemy.ext.declarative import DeclarativeMeta, declarative_base
+from sqlalchemy.orm import sessionmaker, Session
 
 app = FastAPI(
     title="Trading App"
 )
 
+origins = ["*"]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=['http://127.0.0.1:5173'],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 fastapi_users = FastAPIUsers[User, int](
@@ -51,11 +64,22 @@ app.include_router(
     tags=["auth"],
 )
 
+app.include_router(
+    fastapi_users.get_reset_password_router(),
+    prefix="/auth",
+    tags=["auth"],
+)
+
 current_user = fastapi_users.current_user()
 
 templates = Jinja2Templates(directory="templates")
 
 
+DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+
+engine = engine = create_engine(DATABASE_URL)
+
+session = Session(bind=engine)
 
 
 
@@ -72,3 +96,32 @@ def unprotected_route(request: Request):
 @app.get("/registration")
 def unprotected_route(request: Request):
     return templates.TemplateResponse("registration.html", {"request": request})
+
+@app.get("/burger")
+def get_burgers():
+    query = select(products).where(products.c.food_type == 3)
+    result = session.execute(query)
+    S = {}
+    for i in result.all():
+        S[str(i[1])] = str(i[2])
+    return S
+
+@app.get("/pizza")
+def get_pizza():
+    query = select(products).where(products.c.food_type == 4)
+    result = session.execute(query)
+    S = {}
+    for i in result.all():
+        S[str(i[1])] = (i[2])
+    return S
+    
+    
+
+@app.get("/beer")
+def get_beer():
+    query = select(products).where(products.c.food_type == 5)
+    result = session.execute(query)
+    S = {}
+    for i in result.all():
+        S[str(i[1])] = str(i[2])
+    return S
